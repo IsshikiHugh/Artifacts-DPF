@@ -19,13 +19,19 @@ from datetime import datetime, timezone, timedelta
 # China timezone
 CHINA_TZ = timezone(timedelta(hours=8))
 
-# Colors and theme
-BG_COLOR = "#0d0d1a"
-CARD_COLOR = "#1a1a2e"
-ACCENT_COLOR = "#7c5cbf"
-TEXT_COLOR = "#e0e0e0"
-MUTED_COLOR = "#888"
-BORDER_COLOR = "#2a2a4a"
+# IroSilent theme colors (matching https://scholar.isshikih.top/)
+BG_COLOR = "#fffcf5"
+CARD_COLOR = "#fffcf5"
+ACCENT_COLOR = "#5f6f65"
+TEXT_COLOR = "#40534c"
+MUTED_COLOR = "#677d6a"
+LIGHTER_COLOR = "#96a197"
+BORDER_COLOR = "#eee7e1"
+LINK_COLOR = "#81a263"
+LINK_HOVER = "#538392"
+SHADOW_COLOR = "#f8f3ef"
+SHADOW_HOVER = "#eee7e1"
+FONT_FAMILY = "optima, Philosopher, Helvetica, Arial, Verdana, sans-serif"
 
 
 def get_today_str() -> str:
@@ -41,7 +47,6 @@ def get_today_display() -> str:
 
 
 def extract_project_url(entry: dict) -> str | None:
-    """Extract project page URL from entry or create appropriate link."""
     return entry.get("project_page_url") or None
 
 
@@ -56,24 +61,21 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
 
         proj_url = extract_project_url(paper)
 
-        # Build links
         links_html = f"""
             <div class="paper-links">
-                <a href="{paper['arxiv_url']}" class="link-btn" target="_blank">📄 arXiv</a>
-                <a href="{paper['pdf_url']}" class="link-btn" target="_blank">📥 PDF</a>"""
+                <a href="{paper['arxiv_url']}" class="link-btn" target="_blank">arXiv</a>
+                <a href="{paper['pdf_url']}" class="link-btn" target="_blank">PDF</a>"""
 
         if proj_url:
-            links_html += f'\n                <a href="{proj_url}" class="link-btn project" target="_blank">🌐 Project Page</a>'
+            links_html += f'\n                <a href="{proj_url}" class="link-btn project" target="_blank">Project Page</a>'
 
         links_html += "\n            </div>"
 
         card = f"""
         <div class="paper-card">
-            <div class="paper-number">#{i}</div>
             <h2 class="paper-title">
                 <a href="{paper['arxiv_url']}" target="_blank">{paper['title']}</a>
             </h2>
-            <div class="paper-meta">{paper.get('category', '')}</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
@@ -112,9 +114,20 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
         body {{
             background: {BG_COLOR};
             color: {TEXT_COLOR};
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+            font-family: {FONT_FAMILY};
             line-height: 1.6;
             min-height: 100vh;
+        }}
+        ::selection {{
+            background: {BORDER_COLOR};
+        }}
+        a {{
+            color: {LINK_COLOR};
+            text-decoration: none;
+            transition: color 0.2s;
+        }}
+        a:hover {{
+            color: {LINK_HOVER};
         }}
         .container {{
             max-width: 900px;
@@ -126,147 +139,123 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
             text-align: center;
         }}
         header h1 {{
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: {ACCENT_COLOR};
             margin-bottom: 8px;
-            letter-spacing: 0.05em;
+            font-weight: 400;
         }}
         header .subtitle {{
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: {MUTED_COLOR};
         }}
         header .subtitle a {{
-            color: {ACCENT_COLOR};
-            text-decoration: none;
+            color: {LINK_COLOR};
         }}
         header .subtitle a:hover {{
-            text-decoration: underline;
-        }}
-        .stats-bar {{
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 0.9rem;
-            color: {MUTED_COLOR};
+            color: {LINK_HOVER};
         }}
         .paper-card {{
             background: {CARD_COLOR};
             border: 1px solid {BORDER_COLOR};
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 20px;
-            transition: border-color 0.2s, transform 0.2s;
+            border-radius: 8px;
+            padding: 24px 28px;
+            margin-bottom: 24px;
+            box-shadow: 2px 2px 3px {SHADOW_COLOR},
+                        2px 2px 7px {SHADOW_COLOR},
+                        -1px -1px 3px {SHADOW_COLOR},
+                        -1px -1px 7px {SHADOW_COLOR};
+            transition: box-shadow 0.2s;
             position: relative;
         }}
         .paper-card:hover {{
-            border-color: {ACCENT_COLOR};
-            transform: translateY(-2px);
-        }}
-        .paper-number {{
-            position: absolute;
-            top: 16px;
-            right: 20px;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: {BORDER_COLOR};
-            opacity: 0.5;
+            box-shadow: 0px 0px 3px {SHADOW_HOVER},
+                        1px 1px 4px {SHADOW_HOVER},
+                        1px 1px 8px {SHADOW_HOVER};
         }}
         .paper-title {{
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            padding-right: 40px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            line-height: 1.4;
         }}
         .paper-title a {{
             color: {TEXT_COLOR};
-            text-decoration: none;
         }}
         .paper-title a:hover {{
-            color: {ACCENT_COLOR};
-        }}
-        .paper-meta {{
-            font-size: 0.8rem;
-            color: {ACCENT_COLOR};
-            margin-bottom: 16px;
-            display: inline-block;
-            background: rgba(124, 92, 191, 0.1);
-            padding: 2px 10px;
-            border-radius: 4px;
+            color: {LINK_HOVER};
         }}
         .paper-summary {{
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }}
         .summary-row {{
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: flex;
             gap: 8px;
         }}
         .summary-label {{
             flex-shrink: 0;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 600;
             color: {ACCENT_COLOR};
-            background: rgba(124, 92, 191, 0.08);
-            padding: 1px 8px;
-            border-radius: 4px;
+            padding: 1px 6px;
             min-width: 56px;
-            text-align: center;
         }}
         .summary-text {{
-            font-size: 0.9rem;
-            color: #ccc;
+            font-size: 0.88rem;
+            color: {TEXT_COLOR};
+            line-height: 1.5;
         }}
         .paper-links {{
             display: flex;
-            gap: 10px;
+            gap: 8px;
             flex-wrap: wrap;
         }}
         .link-btn {{
             display: inline-block;
-            padding: 6px 14px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            text-decoration: none;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.82rem;
+            color: {LINK_COLOR};
+            border: 1px solid {BORDER_COLOR};
             transition: all 0.2s;
-            background: rgba(124, 92, 191, 0.15);
-            color: {ACCENT_COLOR};
-            border: 1px solid transparent;
         }}
         .link-btn:hover {{
-            background: rgba(124, 92, 191, 0.3);
-            border-color: {ACCENT_COLOR};
+            color: {LINK_HOVER};
+            border-color: {LINK_COLOR};
         }}
         .link-btn.project {{
-            background: rgba(76, 175, 80, 0.15);
-            color: #66bb6a;
+            color: {MUTED_COLOR};
+            border-color: {BORDER_COLOR};
         }}
         .link-btn.project:hover {{
-            background: rgba(76, 175, 80, 0.3);
-            border-color: #66bb6a;
+            color: {LINK_HOVER};
+            border-color: {LINK_COLOR};
         }}
         .empty-state {{
             text-align: center;
             padding: 60px 20px;
         }}
         .empty-state p {{
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 12px;
         }}
         .empty-state .hint {{
-            font-size: 0.9rem;
-            color: {MUTED_COLOR};
+            font-size: 0.85rem;
+            color: {LIGHTER_COLOR};
         }}
         footer {{
             text-align: center;
             margin-top: 60px;
             padding-top: 20px;
+            font-size: 0.78rem;
+            color: {LIGHTER_COLOR};
             border-top: 1px solid {BORDER_COLOR};
-            font-size: 0.8rem;
-            color: {MUTED_COLOR};
         }}
         @media (max-width: 600px) {{
-            .container {{ padding: 20px 12px; }}
-            header h1 {{ font-size: 1.4rem; }}
-            .paper-card {{ padding: 16px; }}
-            .paper-title {{ font-size: 1rem; }}
+            .container {{ padding: 24px 16px; }}
+            header h1 {{ font-size: 1.3rem; }}
+            .paper-card {{ padding: 18px 20px; }}
+            .paper-title {{ font-size: 0.95rem; }}
             .summary-row {{ flex-direction: column; gap: 2px; }}
             .summary-label {{ align-self: flex-start; }}
         }}
@@ -275,23 +264,17 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
 <body>
     <div class="container">
         <header>
-            <h1>📄 Daily Paper Feed</h1>
+            <h1>Daily Paper Feed</h1>
             <div class="subtitle">
                 {today_display} · 共 {len(papers)} 篇相关论文 ·
-                <a href="archive/">📚 历史存档</a>
+                <a href="archive/">历史存档</a>
             </div>
         </header>
-
-        <div class="stats-bar">
-            来源：<a href="https://papers.cool/arxiv/cs.CV" target="_blank" style="color:{ACCENT_COLOR};">cs.CV</a>
-            · <a href="https://papers.cool/arxiv/cs.AI" target="_blank" style="color:{ACCENT_COLOR};">cs.AI</a>
-            · 通过 papers.cool 抓取
-        </div>
 
         {papers_content}
 
         <footer>
-            <p>Daily Paper Feed · 自动从 arXiv 抓取 · 基于研究兴趣筛选</p>
+            <p>Daily Paper Feed · 自动筛选自 arXiv</p>
         </footer>
     </div>
 </body>
@@ -318,9 +301,19 @@ def generate_archive_index(archives: list[str]) -> str:
         body {{
             background: {BG_COLOR};
             color: {TEXT_COLOR};
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+            font-family: {FONT_FAMILY};
             line-height: 1.6;
             min-height: 100vh;
+        }}
+        ::selection {{
+            background: {BORDER_COLOR};
+        }}
+        a {{
+            color: {LINK_COLOR};
+            text-decoration: none;
+        }}
+        a:hover {{
+            color: {LINK_HOVER};
         }}
         .container {{
             max-width: 700px;
@@ -328,6 +321,8 @@ def generate_archive_index(archives: list[str]) -> str:
             padding: 40px 20px;
         }}
         h1 {{
+            font-size: 1.4rem;
+            font-weight: 400;
             color: {ACCENT_COLOR};
             margin-bottom: 8px;
         }}
@@ -335,41 +330,35 @@ def generate_archive_index(archives: list[str]) -> str:
             margin-bottom: 30px;
         }}
         .back a {{
-            color: {ACCENT_COLOR};
-            text-decoration: none;
+            color: {LINK_COLOR};
             font-size: 0.9rem;
-        }}
-        .back a:hover {{
-            text-decoration: underline;
         }}
         ul {{
             list-style: none;
         }}
         li {{
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }}
         li a {{
             color: {TEXT_COLOR};
-            text-decoration: none;
-            font-size: 1rem;
+            font-size: 0.95rem;
             padding: 8px 16px;
             display: block;
-            background: {CARD_COLOR};
             border: 1px solid {BORDER_COLOR};
-            border-radius: 8px;
+            border-radius: 6px;
             transition: all 0.2s;
         }}
         li a:hover {{
-            border-color: {ACCENT_COLOR};
-            color: {ACCENT_COLOR};
+            border-color: {LINK_COLOR};
+            color: {LINK_HOVER};
         }}
     </style>
 </head>
 <body>
     <div class="container">
         <div class="back"><a href="../">← 返回最新</a></div>
-        <h1>📚 历史存档</h1>
-        <p style="color: {MUTED_COLOR}; margin-bottom: 30px;">共 {len(archives)} 期</p>
+        <h1>历史存档</h1>
+        <p style="color: {LIGHTER_COLOR}; margin-bottom: 24px;">共 {len(archives)} 期</p>
         <ul>
             {''.join(items_html)}
         </ul>
@@ -380,6 +369,7 @@ def generate_archive_index(archives: list[str]) -> str:
 
 def main():
     papers = json.load(sys.stdin)
+    # Use today's date (China time) for the page
     today_str = get_today_str()
     today_display = get_today_display()
 
@@ -400,14 +390,10 @@ def main():
 
     archive_path = os.path.join(archive_dir, f"{today_str}.html")
     archive_html = generate_html(today_str, today_display, papers)
-    # Update the back link in archive page
+    # Fix archive page nav to point back properly
     archive_html = archive_html.replace(
-        '<a href="archive/">📚 历史存档</a>',
-        '<a href="index.html" class="archive-link">📚 全部存档</a>'
-    )
-    archive_html = archive_html.replace(
-        '<a href="../">← 返回最新</a>',
-        '<a href="../">← 返回最新</a>'
+        '<a href="archive/">历史存档</a>',
+        '<a href="index.html">全部存档</a>'
     )
     with open(archive_path, "w", encoding="utf-8") as f:
         f.write(archive_html)
@@ -420,7 +406,6 @@ def main():
             if fname.endswith(".html") and fname != "index.html":
                 existing_archives.append(fname.replace(".html", ""))
 
-    # Add today to the list
     if today_str not in existing_archives:
         existing_archives.append(today_str)
 
@@ -430,10 +415,6 @@ def main():
         f.write(archive_index_html)
     print(f"  → archive/index.html ({len(existing_archives)} archives)", file=sys.stderr)
 
-    # Also update the main page's archive link
-    # (the archive page already has the correct link)
-
-    # Print the page path for cron job to use
     print(f"\nPages generated at:", file=sys.stderr)
     print(f"  file://{index_path}", file=sys.stderr)
     print(f"  file://{archive_path}", file=sys.stderr)

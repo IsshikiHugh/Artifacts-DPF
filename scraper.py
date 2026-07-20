@@ -191,10 +191,10 @@ def fetch_all_papers_for_category(base_url: str, category: str, target_date: str
     total = extract_total(html)
 
     if total == 0:
-        print(f"  No papers found for {category} on {page_date or 'today'}", file=sys.stderr)
-        return []
+        print(f"  No papers found for {category} on this date", file=sys.stderr)
+        return [], page_date or ""
 
-    print(f"  {category}: {total} papers total, fetching with pagination...", file=sys.stderr)
+    print(f"  {category}: {total} papers total (page date: {page_date or 'unknown'}), fetching with pagination...", file=sys.stderr)
 
     all_papers = []
     skip = 0
