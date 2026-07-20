@@ -19,18 +19,18 @@ from datetime import datetime, timezone, timedelta
 # China timezone
 CHINA_TZ = timezone(timedelta(hours=8))
 
-# IroSilent theme colors (matching https://scholar.isshikih.top/)
-BG_COLOR = "#fffcf5"
-CARD_COLOR = "#fffcf5"
-ACCENT_COLOR = "#5f6f65"
-TEXT_COLOR = "#40534c"
-MUTED_COLOR = "#677d6a"
-LIGHTER_COLOR = "#96a197"
-BORDER_COLOR = "#eee7e1"
-LINK_COLOR = "#81a263"
-LINK_HOVER = "#538392"
-SHADOW_COLOR = "#f8f3ef"
-SHADOW_HOVER = "#eee7e1"
+# IroBright theme colors (matching https://scholar.isshikih.top/)
+BG_COLOR = "#fffaf5"
+CARD_COLOR = "#fffaf5"
+ACCENT_COLOR = "#967e76"
+TEXT_COLOR = "#756464"
+MUTED_COLOR = "#857878"
+LIGHTER_COLOR = "#b1a8a8"
+BORDER_COLOR = "#e7ddd5"
+LINK_COLOR = "#809a6f"
+LINK_HOVER = "#b6c7aa"
+SHADOW_COLOR = "#f4ede7"
+SHADOW_HOVER = "#e7ddd5"
 FONT_FAMILY = "optima, Philosopher, Helvetica, Arial, Verdana, sans-serif"
 
 
