@@ -76,6 +76,7 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
             <h2 class="paper-title">
                 <a href="{paper['arxiv_url']}" target="_blank">{paper['title']}</a>
             </h2>
+            <div class="paper-authors">{paper.get('authors', '')}</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
@@ -183,6 +184,12 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
         }}
         .paper-title a:hover {{
             color: {LINK_HOVER};
+        }}
+        .paper-authors {{
+            font-size: 0.82rem;
+            color: {MUTED_COLOR};
+            margin-bottom: 14px;
+            line-height: 1.4;
         }}
         .paper-summary {{
             margin-bottom: 14px;

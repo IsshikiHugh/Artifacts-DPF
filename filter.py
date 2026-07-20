@@ -206,6 +206,7 @@ def main():
                 entry = {
                     "arxiv_id": arxiv_id,
                     "title": paper["title"],
+                    "authors": paper.get("authors", ""),
                     "category": paper.get("category", ""),
                     "arxiv_url": paper["arxiv_url"],
                     "pdf_url": paper["pdf_url"],
