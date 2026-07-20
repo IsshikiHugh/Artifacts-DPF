@@ -14,19 +14,26 @@ import os
 import subprocess
 import sys
 
-# User's research interests (used in the prompt)
-RESEARCH_INTERESTS = """
-- Human motion / pose estimation / mesh recovery (SMPL, human mesh)
-- Human-scene interaction / 3D scene understanding
-- Video generation / video diffusion models
-- Embodied AI / robot learning / policy learning
-- 3D human reconstruction / 4D human / human digitization
-- Egocentric vision / hand-object interaction
-- MLLM (multimodal LLM) reasoning / visual grounding
-- AI agents / tool-use / planning / reasoning
-- Video understanding / long video QA / spatio-temporal reasoning
-- Image/video generation and editing
-"""
+# Config file path (local, not committed to git)
+CONFIG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "paperfeed_config.json")
+
+
+def load_research_interests() -> str:
+    """Load research interests from config file."""
+    try:
+        with open(CONFIG_PATH, "r") as f:
+            config = json.load(f)
+        interests = config.get("research_interests", [])
+        if not interests:
+            print("Warning: No research_interests found in config", file=sys.stderr)
+            return ""
+        return "\n".join(f"- {interest}" for interest in interests)
+    except FileNotFoundError:
+        print(f"Error: Config file not found at {CONFIG_PATH}", file=sys.stderr)
+        sys.exit(1)
+    except json.JSONDecodeError as e:
+        print(f"Error: Invalid config JSON: {e}", file=sys.stderr)
+        sys.exit(1)
 
 BATCH_SIZE = 20
 CLAUDE_CMD = ["claude", "-p", "--print", "--dangerously-skip-permissions"]
@@ -34,6 +41,7 @@ CLAUDE_CMD = ["claude", "-p", "--print", "--dangerously-skip-permissions"]
 
 def build_batch_prompt(batch: list[dict], batch_num: int, total_batches: int) -> str:
     """Build a prompt for Claude to analyze a batch of papers."""
+    research_interests = load_research_interests()
     papers_text = []
     for i, paper in enumerate(batch):
         papers_text.append(f"""=== PAPER {i + 1} ===
@@ -50,7 +58,7 @@ abstract: {paper['abstract'][:1500]}
 For each paper, determine if it's relevant to the user's research interests (below), and if so, write a concise Chinese summary.
 
 RESEARCH INTERESTS:
-{RESEARCH_INTERESTS}
+{research_interests}
 
 For each paper, decide: IS_YES_RELEVANT or IS_NOT_RELEVANT.
 
