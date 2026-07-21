@@ -269,12 +269,13 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
             border-top: 1px solid {BORDER_COLOR};
         }}
         @media (max-width: 600px) {{
+            html {{ font-size: 18px; }}
             .container {{ padding: 24px 16px; }}
-            header h1 {{ font-size: 1.3rem; }}
-            .paper-card {{ padding: 18px 20px; }}
-            .paper-title {{ font-size: 0.95rem; }}
-            .summary-row {{ flex-direction: column; gap: 2px; }}
-            .summary-label {{ align-self: flex-start; }}
+            header h1 {{ font-size: 1.4rem; }}
+            header .subtitle {{ font-size: 0.95rem; }}
+            .paper-card {{ padding: 20px 18px; }}
+            .summary-row {{ flex-direction: column; gap: 3px; }}
+            .summary-label {{ align-self: flex-start; padding-left: 0; }}
         }}
     </style>
 </head>
