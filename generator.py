@@ -52,6 +52,27 @@ def extract_project_url(entry: dict) -> str | None:
     return entry.get("project_page_url") or None
 
 
+def fix_cjk_spacing(text: str) -> str:
+    """Add spaces between CJK characters and ASCII letters/numbers in plain text."""
+    text = re.sub(r'([\u4e00-\u9fff\u3400-\u4dbf\uff00-\uffef])([a-zA-Z0-9])', r'\1 \2', text)
+    text = re.sub(r'([a-zA-Z0-9])([\u4e00-\u9fff\u3400-\u4dbf\uff00-\uffef])', r'\1 \2', text)
+    return text
+
+
+def fix_cjk_spacing_in_html(html: str) -> str:
+    """Fix CJK-ASCII spacing in final HTML, crossing tag boundaries."""
+    # Direct adjacency (no tag between)
+    html = re.sub(r'([\u4e00-\u9fff\u3400-\u4dbf\uff00-\uffef])([a-zA-Z0-9])', r'\1 \2', html)
+    html = re.sub(r'([a-zA-Z0-9])([\u4e00-\u9fff\u3400-\u4dbf\uff00-\uffef])', r'\1 \2', html)
+    # Across closing tags: CJK</tag>ASCII
+    html = re.sub(r'([\u4e00-\u9fff\u3400-\u4dbf\uff00-\uffef])(</[^>]+>)([a-zA-Z0-9])', r'\1\2 \3', html)
+    html = re.sub(r'([a-zA-Z0-9])(</[^>]+>)([\u4e00-\u9fff\u3400-\u4dbf\uff00-\uffef])', r'\1\2 \3', html)
+    # Across opening tags: CJK<tag>ASCII
+    html = re.sub(r'([\u4e00-\u9fff\u3400-\u4dbf\uff00-\uffef])(<[^>]+>)([a-zA-Z0-9])', r'\1 \2\3', html)
+    html = re.sub(r'([a-zA-Z0-9])(<[^>]+>)([\u4e00-\u9fff\u3400-\u4dbf\uff00-\uffef])', r'\1 \2\3', html)
+    return html
+
+
 def render_bold(text: str) -> str:
     """Convert **bold** markdown to <strong class="kw"> for HTML rendering."""
     return re.sub(r'\*\*(.+?)\*\*', r'<strong class="kw">\1</strong>', text)
@@ -123,6 +144,7 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
             background: {BG_COLOR};
             color: {TEXT_COLOR};
             font-family: {FONT_FAMILY};
+            font-kerning: normal;
             line-height: 1.6;
             min-height: 100vh;
             letter-spacing: 0.02em;
@@ -298,6 +320,7 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
     </div>
 </body>
 </html>"""
+    html = fix_cjk_spacing_in_html(html)
     return html
 
 
@@ -322,6 +345,7 @@ def generate_archive_index(archives: list[str]) -> str:
             background: {BG_COLOR};
             color: {TEXT_COLOR};
             font-family: {FONT_FAMILY};
+            font-kerning: normal;
             line-height: 1.6;
             min-height: 100vh;
             letter-spacing: 0.02em;
