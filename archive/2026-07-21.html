@@ -7,22 +7,22 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            background: #fffcf5;
-            color: #40534c;
+            background: #ffffff;
+            color: #383838;
             font-family: optima, Philosopher, Helvetica, Arial, Verdana, sans-serif;
             line-height: 1.6;
             min-height: 100vh;
         }
         ::selection {
-            background: #eee7e1;
+            background: #f0f0f0;
         }
         a {
-            color: #81a263;
+            color: #383838;
             text-decoration: none;
             transition: color 0.2s;
         }
         a:hover {
-            color: #538392;
+            color: #876a53;
         }
         .container {
             max-width: 900px;
@@ -35,37 +35,34 @@
         }
         header h1 {
             font-size: 1.6rem;
-            color: #5f6f65;
+            color: #a27b5c;
             margin-bottom: 8px;
             font-weight: 400;
         }
         header .subtitle {
             font-size: 0.9rem;
-            color: #677d6a;
+            color: #666666;
         }
         header .subtitle a {
-            color: #81a263;
+            color: #383838;
         }
         header .subtitle a:hover {
-            color: #538392;
+            color: #876a53;
         }
         .paper-card {
-            background: #fffcf5;
-            border: 1px solid #eee7e1;
+            background: #ffffff;
+            border: 1px solid #f0f0f0;
             border-radius: 8px;
             padding: 24px 28px;
-            margin-bottom: 24px;
-            box-shadow: 2px 2px 3px #f8f3ef,
-                        2px 2px 7px #f8f3ef,
-                        -1px -1px 3px #f8f3ef,
-                        -1px -1px 7px #f8f3ef;
-            transition: box-shadow 0.2s;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
             position: relative;
         }
+        .paper-card:last-child {
+            border-bottom: none;
+        }
         .paper-card:hover {
-            box-shadow: 0px 0px 3px #eee7e1,
-                        1px 1px 4px #eee7e1,
-                        1px 1px 8px #eee7e1;
+            border-color: #a27b5c;
         }
         .paper-title {
             font-size: 1.05rem;
@@ -74,14 +71,14 @@
             line-height: 1.4;
         }
         .paper-title a {
-            color: #40534c;
+            color: #383838;
         }
         .paper-title a:hover {
-            color: #538392;
+            color: #876a53;
         }
         .paper-authors {
             font-size: 0.82rem;
-            color: #677d6a;
+            color: #666666;
             margin-bottom: 14px;
             line-height: 1.4;
         }
@@ -97,14 +94,18 @@
             flex-shrink: 0;
             font-size: 0.78rem;
             font-weight: 600;
-            color: #5f6f65;
+            color: #a27b5c;
             padding: 1px 6px;
             min-width: 56px;
         }
         .summary-text {
             font-size: 0.88rem;
-            color: #40534c;
+            color: #383838;
             line-height: 1.5;
+        }
+        .summary-text strong.kw {
+            color: #81a263;
+            font-weight: 600;
         }
         .paper-links {
             display: flex;
@@ -116,21 +117,21 @@
             padding: 3px 10px;
             border-radius: 4px;
             font-size: 0.82rem;
-            color: #81a263;
-            border: 1px solid #eee7e1;
+            color: #383838;
+            border: 1px solid #f0f0f0;
             transition: all 0.2s;
         }
         .link-btn:hover {
-            color: #538392;
-            border-color: #81a263;
+            color: #876a53;
+            border-color: #383838;
         }
         .link-btn.project {
-            color: #677d6a;
-            border-color: #eee7e1;
+            color: #666666;
+            border-color: #f0f0f0;
         }
         .link-btn.project:hover {
-            color: #538392;
-            border-color: #81a263;
+            color: #876a53;
+            border-color: #383838;
         }
         .empty-state {
             text-align: center;
@@ -142,15 +143,15 @@
         }
         .empty-state .hint {
             font-size: 0.85rem;
-            color: #96a197;
+            color: #999999;
         }
         footer {
             text-align: center;
             margin-top: 60px;
             padding-top: 20px;
             font-size: 0.78rem;
-            color: #96a197;
-            border-top: 1px solid #eee7e1;
+            color: #999999;
+            border-top: 1px solid #f0f0f0;
         }
         @media (max-width: 600px) {
             .container { padding: 24px 16px; }
@@ -167,7 +168,7 @@
         <header>
             <h1>Daily Paper Feed</h1>
             <div class="subtitle">
-                2026 年 07 月 21 日 星期二 · 共 31 篇相关论文 ·
+                2026 年 07 月 21 日 星期二 · 共 9 篇相关论文 ·
                 <a href="index.html">全部存档</a>
             </div>
         </header>
@@ -177,19 +178,19 @@
             <h2 class="paper-title">
                 <a href="https://arxiv.org/abs/2607.16193" target="_blank">Knowing the Self, Understanding the World: A Dual-Cognition Benchmark for UAV Spatio-temporal Reasoning with MLLMs</a>
             </h2>
-            <div class="paper-authors">Like Liu, Zhengzheng Xu, Haitao He, Hongzhe Li, Shuchang Zhang, Dian Shao</div>
+            <div class="paper-authors"></div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">评测MLLM对无人机自身状态与外部环境的时空推理能力</span>
+                    <span class="summary-text">评估MLLM在无人机多视角时空推理的双重认知能力</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有无人机基准只测场景理解，缺乏自身状态与环境的联合认知评测</span>
+                    <span class="summary-text">现有基准未联合评估无人机自身状态与环境状态推理</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">基于语义点云自动构建多视角基准，考察<u>空间定位</u>与<u>时间区间定位</u>能力</span>
+                    <span class="summary-text">提出UAV-DualCog基准，含图像与视频任务，用语义点云自动构建，评测自我状态与环境推理及时空定位。</span>
                 </div>
             </div>
             
@@ -203,19 +204,19 @@
             <h2 class="paper-title">
                 <a href="https://arxiv.org/abs/2607.16192" target="_blank">MotionForesight: Re-purposing Video Models for Future 3D Scene-Flow Prediction</a>
             </h2>
-            <div class="paper-authors">Homanga Bharadhwaj, Yash Jangir</div>
+            <div class="paper-authors"></div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">由单目视频预测人机交互后物体的未来3D运动轨迹</span>
+                    <span class="summary-text">从单目人物交互视频预测物体未来3D运动轨迹</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">让模型像人一样预判交互后物体的物理运动走向</span>
+                    <span class="summary-text">需在无物体先验下预判交互的物理后果</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">复用<u>预训练视频模型</u>的运动先验，训练轻量<u>适配器</u>转为未来3D场景流预测</span>
+                    <span class="summary-text">复用预训练视频模型的运动先验，将其从像素预测转向未来3D场景流预测，用轻量适配器实现前向预测。</span>
                 </div>
             </div>
             
@@ -229,19 +230,19 @@
             <h2 class="paper-title">
                 <a href="https://arxiv.org/abs/2607.16190" target="_blank">FVAttn: Adaptive Sparse Attention with Runtime Load Balancing for Video Generation</a>
             </h2>
-            <div class="paper-authors">Hao Liu, Chenghuan Huang, Ye Huang, Zhiying Wen, Hao Liu, Mohan Zhang, Chen Li, Ziyang Ma, Jing Lyu, Jiangsu Du</div>
+            <div class="paper-authors"></div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">解决<u>视频生成</u>中多GPU稀疏注意力的负载不均问题</span>
+                    <span class="summary-text">加速视频扩散Transformer的稀疏注意力计算</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">自适应稀疏路由使各注意力头负载不均，形成拖慢全局的长尾</span>
+                    <span class="summary-text">自适应稀疏注意力在多GPU下负载不均导致落后节点</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">运行时<u>负载均衡</u>迁移重头，配合<u>稀疏增强</u>填充空闲算力提速</span>
+                    <span class="summary-text">免训练稀疏注意力系统，用Top-p路由加运行时负载均衡迁移重头，实现4.4倍注意力加速。</span>
                 </div>
             </div>
             
@@ -255,19 +256,19 @@
             <h2 class="paper-title">
                 <a href="https://arxiv.org/abs/2607.16189" target="_blank">Searching Videos as Trees: Self-Correcting Agents for Grounded Long Video QA</a>
             </h2>
-            <div class="paper-authors">Ce Zhang, Ziyang Wang, Yulu Pan, Oluwatumininu Oguntola, Pranav Wagh, Qiyu Wu, Hiromi Wakaki, Mohit Bansal, Gedas Bertasius</div>
+            <div class="paper-authors"></div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">长视频<u>定位问答</u>：既要答对问题也要定位证据区间</span>
+                    <span class="summary-text">有依据的长视频问答，需定位支撑答案的证据区间</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有agent只能由粗到细裁剪，出错后无法回溯纠正</span>
+                    <span class="summary-text">现有智能体只能粗到细缩窄，无法回溯纠错</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">构建自适应<u>时间树</u>，训练agent用缩放/平移/回退实现<u>自我纠错式搜索</u></span>
+                    <span class="summary-text">将任务建模为在自适应时间树上的自纠错搜索，训练智能体用放大/缩小/移动/回答操作，先SFT再RL。</span>
                 </div>
             </div>
             
@@ -281,19 +282,19 @@
             <h2 class="paper-title">
                 <a href="https://arxiv.org/abs/2607.16165" target="_blank">An Exam for Active Observers</a>
             </h2>
-            <div class="paper-authors">Jiarui Zhang, Muzi Tao, Shangshang Wang, Ollie Liu, Xuezhe Ma, Willie Neiswanger</div>
+            <div class="paper-authors"></div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">评测MLLM是否具备<u>主动视觉观察</u>（反复重新聚焦）能力</span>
+                    <span class="summary-text">衡量MLLM主动观察（闭环视觉感知）能力的基准</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">人类靠不断重新看来验证假设，现有基准只测单次静态描述</span>
+                    <span class="summary-text">现有基准无法评估模型是否进行主动重复观察</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出17项任务的ActiveVision基准，前沿MLLM得分远低于人类</span>
+                    <span class="summary-text">提出ActiveVision基准，17个任务强制重复视觉感知，发现前沿MLLM表现远低于人类。</span>
                 </div>
             </div>
             
@@ -307,19 +308,19 @@
             <h2 class="paper-title">
                 <a href="https://arxiv.org/abs/2607.16146" target="_blank">VTLoc: Learning-based Tactile Contact Localization in Visual Point Clouds</a>
             </h2>
-            <div class="paper-authors">Zhiyuan Wu, Zhuo Chen, Shan Luo</div>
+            <div class="paper-authors"></div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">在<u>视觉点云</u>上定位触觉传感器的接触位置</span>
+                    <span class="summary-text">在视觉点云中定位机器人触觉接触点</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">视触觉模态空间对齐难，单点触觉存在局部-全局对应歧义</span>
+                    <span class="summary-text">触觉数据与视觉几何的精确空间对齐困难</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用<u>几何多模态对齐</u>重建伪点云，再迭代更新精化接触定位</span>
+                    <span class="summary-text">提出视觉-触觉框架，用几何多模态对齐重建伪点云并对齐视觉点云，迭代精化接触位置预测。</span>
                 </div>
             </div>
             
@@ -331,652 +332,79 @@
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.16107" target="_blank">Audio-Visual Flamingo: Open Audio-Visual Intelligence for Long and Complex Videos</a>
+                <a href="https://arxiv.org/abs/2607.16133" target="_blank">When Do Multi-Agent Systems Help? An Information Bottleneck Perspective</a>
             </h2>
-            <div class="paper-authors">Sreyan Ghosh, Arushi Goel, Kaousheik Jayakumar, Lasha Koroshinadze, Nishit Anand, Siddharth Gururani, Hanrong Ye, Pritam Biswas, Yuanhang Su, Ehsan Hosseini-Asl, Sang-gil Lee, Zhifeng Kong, Jaehyeon Kim, Sungwon Kim, S Sakshi, Ramani Duraiswami, Dinesh Manocha, Andrew Tao, Mohammad Shoeybi, Bryan Catanzaro, Ming-Yu Liu, Wei Ping</div>
+            <div class="paper-authors"></div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">面向<u>长视频</u>的音频-视觉联合理解与推理</span>
+                    <span class="summary-text">从信息瓶颈视角分析多智能体系统何时优于单智能体</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有视听LLM多聚焦短片段，难支撑长时序多事件推理</span>
+                    <span class="summary-text">多智能体相对单智能体的优势不明确且不稳定</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">三阶段课程训练结合<u>时序视听交错思维链</u>，推理步骤对齐时间戳</span>
+                    <span class="summary-text">将有限中继消息的压缩建模为信息瓶颈权衡，理论加18组实验表明中继近充分时多智能体更有利，尤其弱模型。</span>
+                </div>
+            </div>
+            
+            <div class="paper-links">
+                <a href="https://arxiv.org/abs/2607.16133" class="link-btn" target="_blank">arXiv</a>
+                <a href="https://arxiv.org/pdf/2607.16133" class="link-btn" target="_blank">PDF</a>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <h2 class="paper-title">
+                <a href="https://arxiv.org/abs/2607.16131" target="_blank">ToolSciVer: Multimodal Scientific Claim Verification with Visual Tool Augmented Reinforcement Learning</a>
+            </h2>
+            <div class="paper-authors"></div>
+            <div class="paper-summary">
+                <div class="summary-row">
+                    <span class="summary-label">任务设定</span>
+                    <span class="summary-text">多模态科学论断验证，需从图表等证据核验</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">痛点动机</span>
+                    <span class="summary-text">模型难以定位并准确读取结构化科学视觉证据</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">解决方案</span>
+                    <span class="summary-text">为VLM配备表格聚焦、图表解析、区域缩放三类视觉工具，用GRPO复合奖励训练工具使用策略。</span>
+                </div>
+            </div>
+            
+            <div class="paper-links">
+                <a href="https://arxiv.org/abs/2607.16131" class="link-btn" target="_blank">arXiv</a>
+                <a href="https://arxiv.org/pdf/2607.16131" class="link-btn" target="_blank">PDF</a>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <h2 class="paper-title">
+                <a href="https://arxiv.org/abs/2607.16107" target="_blank">Audio-Visual Flamingo: Open Audio-Visual Intelligence for Long and Complex Videos</a>
+            </h2>
+            <div class="paper-authors"></div>
+            <div class="paper-summary">
+                <div class="summary-row">
+                    <span class="summary-label">任务设定</span>
+                    <span class="summary-text">面向长且复杂视频的音视频大语言模型理解与推理</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">痛点动机</span>
+                    <span class="summary-text">现有音视频LLM大多只聚焦短片段</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">解决方案</span>
+                    <span class="summary-text">开源AV-LLM，构建约700万音视频训练实例，三阶段课程训练加时间戳对齐的交错思维链推理。</span>
                 </div>
             </div>
             
             <div class="paper-links">
                 <a href="https://arxiv.org/abs/2607.16107" class="link-btn" target="_blank">arXiv</a>
                 <a href="https://arxiv.org/pdf/2607.16107" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.16094" target="_blank">How Do VLMs Fail? Vision-Operation Misalignment in Compositional VQA</a>
-            </h2>
-            <div class="paper-authors">Navya Gupta, Bingjie Xu, Avinash Anand, Timothy Liu, Zhengchen Zhang</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">剖析VLM在<u>组合式视觉问答</u>中的失败机制</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">已知VLM哪里错却不知为何错，难以针对性修复</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出操作中心机制框架，定位<u>视觉定位失败</u>等四类失败模式及内部通路</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.16094" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.16094" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.16074" target="_blank">JoyNexus: Service-Oriented Multi-Tenant Post-Training for VLA Models</a>
-            </h2>
-            <div class="paper-authors">Haoran Sun, Wentao Zhang, Junyang Hua, Hedan Yang, Yongjian Guo, Yifei Zhang, Xiaolong Xiang, Mingxi Luo, Jing Long, Chen Zhao, Chen Zhou, Wanting Xu, Qiming Yang, Hui Zhang, Song Wang, Xiaodong Bai, Shuai Di, Xu Chu, Xiaotie Deng, Yicheng Gong, Junwu Xiong</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">构建面向VLA模型的多租户后训练云服务</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">独占GPU资源方式使<u>VLA微调</u>成本高、资源利用率低</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">解耦训练/推理/环境服务，共享基座模型+<u>租户专属插槽</u>，支持<u>批量调度</u>多任务训练与评测</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.16074" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.16074" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.16012" target="_blank">DPNeXt: A Lightweight Multi-Scale Feature Fusion Framework for Efficient ViT-Based Multi-Task Dense Prediction</a>
-            </h2>
-            <div class="paper-authors">Jehun Kang, Jungha Wang, Youngjun Hwang, David Hyunchul Shim</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">基于ViT的机器人<u>多任务密集预测</u>（语义分割+深度估计）</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有DPT解码策略限制<u>冻结视觉基础模型</u>的高效利用</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出轻量<u>多尺度特征融合解码器</u>DPNeXt，配合边界引导监督策略，大幅减少参数量</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.16012" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.16012" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15974" target="_blank">Embodied Active Learning under Limited Annotation and Navigation Budget for Object Detection</a>
-            </h2>
-            <div class="paper-authors">Hadrien Crassous, Mohamed Yassine Kabouri, Minahil Raza, Joni Pajarinen, Riad Akrour</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">在有限导航与标注预算下自适应场景目标检测</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">场景迁移检测易失效，标注与探索代价都很高</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<u>具身主动学习</u>框架，利用<u>空间一致性</u>挑选高信息量轨迹与图像重训练检测器</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15974" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15974" class="link-btn" target="_blank">PDF</a>
-                <a href="https://mkabouri.github.io/embodied-active-learning-od" class="link-btn project" target="_blank">Project Page</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15898" target="_blank">Orbis 2: A Hierarchical World Model for Driving</a>
-            </h2>
-            <div class="paper-authors">Sudhanshu Mittal, Arian Mousakhan, Silvio Galesso, Karim Farid, Jonannes Dienert, Rajat Sahay, Thomas Brox</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">面向自动驾驶场景的<u>分层世界模型</u>未来预测</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有世界模型难兼顾感知保真度与空间语义理解</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">分<u>高层粗粒度</u>与<u>低层细节生成</u>两级，结合<u>扩散强制</u>预训练与教师强制微调</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15898" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15898" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15890" target="_blank">Exo2EgoPose: Leveraging Exocentric Demonstrations for Vision-Language guided Egocentric 3D Hand Pose Forecasting</a>
-            </h2>
-            <div class="paper-authors">Zhaofeng Shi, Heqian Qiu, Lanxiao Wang, Xiang Li, Hongliang Li</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">结合视觉语言预测<u>第一人称3D手部姿态</u>的未来动作</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">第一人称视角受限且动态剧烈，姿态预测易失准</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">利用<u>第三人称示范</u>作为稳定指导，通过分层重建与<u>全局到局部调制</u>弥补第一人称局限</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15890" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15890" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15868" target="_blank">EgoExoMoCap: Distributed Ego-Exo Human Motion Capture</a>
-            </h2>
-            <div class="paper-authors">Jiaxi Jiang, Bharat Lal Bhatnagar, Nan Yang, Lingni Ma, Sebastian Starke, Robin Kips, Nadine Bertsch, Christian Holz, Federica Bogo</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">用<u>头戴设备</u>联合捕捉佩戴者及周围人的3D动作</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">传统动捕依赖多机位或穿戴动捕服,难用于真实场景</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">融合头/腕追踪信号与<u>DINOv3</u>图像特征,分布式估计全局人体动作</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15868" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15868" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15849" target="_blank">Test-Time Noise Guided Adaptation for Realistic Autoregressive Video Generation</a>
-            </h2>
-            <div class="paper-authors">Dimitrios Karageorgiou, Symeon Papadopoulos, Ioannis Kompatsiaris, Efstratios Gavves</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text"><u>自回归视频扩散</u>生成长视频时的质量退化问题</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">误差累积使生成轨迹偏离训练分布,陷入<u>终止点</u>难以继续</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">把扩散模型当自身评判器,测试时用噪声偏差引导轨迹避开终止点</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15849" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15849" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15778" target="_blank">Modularized Dynamic-Granularity Video LLM for Multi-Event Long Video Understanding</a>
-            </h2>
-            <div class="paper-authors">Wei Feng, Xin Wang, Yu-Wei Zhan, Yuwei Zhou, Wenwu Zhu</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">长视频<u>多事件理解</u>中关键帧选择与细粒度感知</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">视觉token预算有限,难以兼顾多个关键事件的定位与理解</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">设计<u>动态粒度</u>模块,迭代做<u>时序定位</u>并自反思调整编码精细度</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15778" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15778" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15772" target="_blank">SlotMem: Character-Addressable Internal Memory for Narrative Long Video Generation</a>
-            </h2>
-            <div class="paper-authors">Yilai Liu, Xin Zhang, Shiyuan Zhang, Hongyang Du</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">长篇叙事视频生成中保持多角色身份一致</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有记忆机制粗粒度、纠缠视觉因素，缺乏持续更新</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<u>角色可寻址记忆</u>，用槽位分别压缩编码各角色，并靠<u>角色级交叉注意力</u>定向注入</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15772" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15772" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15732" target="_blank">IoUPD: IoU-Aware Privileged Distillation for Visual Grounding with Multimodal Large Language Models</a>
-            </h2>
-            <div class="paper-authors">Xiuyuan Zhu, Ke Lu, Hao Wu, Zijin Du, Dongming Zhang, Jian Xue</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">MLLM视觉定位中坐标生成与IoU评价不匹配</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">训练优化token似然，评测却看几何重叠，两者存在偏差</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<u>IoU感知特权蒸馏</u>，让看得到标注框的教师模型指导学生精细定位</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15732" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15732" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15727" target="_blank">Event3R: Asynchronous-to-Global 3D Reconstruction from Event Camera via Spatial-Temporal Feature Aggregation</a>
-            </h2>
-            <div class="paper-authors">Jian Huang, Haotian Shen, Xinhao Lou, Chengrui Dong, Wenpu Li, Peidong Liu</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">用事件相机做前馈式全局一致3D重建</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">事件流异步稀疏且缺标注数据，难以扩展DUSt3R式方法</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<u>Event3R</u>，将事件编码为时空体素，用<u>掩码分箱自监督</u>预训练增强重建</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15727" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15727" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15717" target="_blank">Per-Stroke Temporal Control for Text-to-Motion via Action Units and Action-Detection Guidance</a>
-            </h2>
-            <div class="paper-authors">Euijun Jung, Youngki Lee</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">文本生成动作时精细控制每一招的时序节拍</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有模型只认动作类别，难以区分连续同类招式的落点时间</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">引入<u>动作单元(Action Unit)</u>显式条件，配合<u>无训练分类器梯度</u>推理时修正时序</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15717" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15717" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15689" target="_blank">Efficient Frame Selection for Long Videos at Test Time with Attention-Based MLLM Selectors</a>
-            </h2>
-            <div class="paper-authors">Yilin Wang, Xiangxi Zheng, Dongxing Mao, Linjie Li, Zhengyuan Yang, Ping Yu, Rui Yan, Yuan Yao, Alex Jinpeng Wang</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">长视频理解中如何从海量帧里选出关键帧</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">选帧似乎要先看懂视频，形成循环依赖，还要兼顾效率</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">利用MLLM<u>跨模态注意力</u>免生成直接算帧相关性，<u>动态规划</u>联合优化候选与token预算</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15689" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15689" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15667" target="_blank">PE-Field 4D: Video Generation Models as Canvas</a>
-            </h2>
-            <div class="paper-authors">Yunpeng Bai, Haoxiang Li, Qixing Huang</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">视频扩散模型中实现几何感知的相机视角可控生成</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">视角变化与相机运动下场景几何的可控性难以保证</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<u>几何感知交叉注意力</u>，用<u>投影位置编码</u>让生成视频对齐参考帧空间位置</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15667" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15667" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15650" target="_blank">DiTango: Cost-Effective Parallel Diffusion Generation with Selective Attention State Reuse</a>
-            </h2>
-            <div class="paper-authors">Yuyang Chen, Runxin Zhong, Zan Zong, Hengjie Li, Yuyang Jin, Jidong Zhai</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">多节点并行加速<u>DiT扩散</u>生成推理</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text"><u>上下文并行</u>通信开销大,难以扩展到多机</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">发现空间邻近分区贡献更大,提出<u>选择性注意力状态复用</u>降低通信,提速1.9倍</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15650" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15650" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15641" target="_blank">IMBench: A Benchmark for Intuitive Robotic Manipulation</a>
-            </h2>
-            <div class="paper-authors">Anurag Maurya, Sukhvansh Jain, Prajwal Avhad, Gautham Balachandran, Ziyi Zhou, Atharva Kshirsagar, Satyam Singh, Bowen Li. Rishabh Mukund, Ritul Singh, Jatin Vira, Suvonil Chatterjee, Devesh K. Jha</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">评测机器人<u>直觉操作</u>的综合能力</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有基准割裂了物理推理与动作执行的评估</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">构建35个任务、1.4万条轨迹,要求<u>感知-推理-执行</u>闭环完成接触式操作与工具使用</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15641" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15641" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15621" target="_blank">Think at 5 Hz, Act at 20 Hz: Asynchronous Fast-Slow Vision-Language-Action Inference for Closed-Loop Driving</a>
-            </h2>
-            <div class="paper-authors">Yun Li, Jiachen Gong, Simon Thompson, Ehsan Javanmardi, Qunli Zhang, Zifan Zeng, Shiming Liu, Peng Wang, Zixuan Guo, Manabu Tsukada</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">自动驾驶中<u>VLA模型</u>的实时闭环控制</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">大模型推理延迟跟不上车辆控制频率,导致丢帧</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text"><u>快慢双系统架构</u>:慢速VLM缓存场景KV,快速动作专家逐帧回归路径点,随机延迟训练适配异步部署</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15621" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15621" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15600" target="_blank">Geometric Distillation from Rectified Stereo: Leveraging Epipolar Cues for Monocular Depth</a>
-            </h2>
-            <div class="paper-authors">Jung-Hee Kim, Xiaoming Liu</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text"><u>单目深度估计</u>中的尺度模糊问题</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">单视图缺乏几何约束,度量深度尺度常与预测错位</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用<u>极线蒸馏</u>把多视图立体的尺度先验迁移进单目模型,推理时仍只需单张图</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15600" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15600" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15565" target="_blank">Ask Twice, Look Twice: Prompt Echoing Resolves the Question-First Paradox in Vision-Language Models</a>
-            </h2>
-            <div class="paper-authors">Rakshanda Hassan Abhinandan, John Galeotti, Deva Ramanan, Gautam Rajendrakumar Gare</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">研究VLM提问应放在图像前还是图像后</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">问题前置能引导<u>视觉感知</u>但答案token难以关注到问题</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<u>问题回声</u>法：图像前后各放一份问题，前者引导感知，后者供<u>答案读取</u></span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15565" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15565" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15400" target="_blank">Unsupervised Keypoints for Real-Time Fall Detection: Comparative Analysis Under Real-world Conditions with Predictive Bandwidth Reduction</a>
-            </h2>
-            <div class="paper-authors">Tasmiah Haque, Jacob Kosinski, Sumit Mohan, Srinjoy Das, Mohammad Abdullah Al-Mamun</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">对比有监督与<u>无监督关键点</u>用于实时跌倒检测</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">遮挡和隐私限制使基于RGB视频的跌倒监测难以部署</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用<u>无监督关键点</u>替代RGB传输，结合<u>变分时序预测</u>判断跌倒，兼顾隐私与遮挡鲁棒性</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15400" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15400" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15374" target="_blank">Reasoning-Guided Part-Level Visual Grounding via Reinforcement Learning</a>
-            </h2>
-            <div class="paper-authors">Kazi Sajeed Mehrab, Hani Alomari, Najibul Haque Sarker, Chia-Wei Tang, Zaber Ibn Abdul Hakim, Anuj Karpatne, Chris Thomas</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">MLLM根据语言查询定位物体的<u>部件</u>区域</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有方法忽略<u>物体-部件层级</u>，导致部件定位不准</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<u>由粗到细</u>分层定位（先物体后部件），用<u>强化学习</u>(GRPO)配合自检反思训练</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15374" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15374" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15331" target="_blank">Training-Free Open-Vocabulary 3D Point-Cloud Segmentation on the Generalized Few-Shot Benchmark</a>
-            </h2>
-            <div class="paper-authors">Silas kwabla Gah, Ebenezer Owusu</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text"><u>开放词汇</u>3D点云场景分割中的新类别识别</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有方法依赖基础类标注、逐场景训练及少样本支持，<u>成本高</u></span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">融合冻结的<u>3D视觉语言模型</u>与<u>SAM3</u>，通过跨视角一致性投票实现全程免训练分割</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15331" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15331" class="link-btn" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15330" target="_blank">Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories</a>
-            </h2>
-            <div class="paper-authors">Xiaomi Robotics Team, Jun Guo, Piaopiao Jin, Jason Li, Peiyan Li, Yingyan Li, Futeng Liu, Wanli Peng, Optimus Qin, Yifei Su, Nan Sun, Qiao Sun, Runze Suo, Heyun Wang, Yunhong Wang, Rujie Wu, Caoyu Xia, Lina Zhang, Jack Zhao, Guoliang Chen, Wenlong Chen, Xinze He, Bin Li, Qing Li, Zhuorong Li, Heng Qu, Wenxuan Song, Diyun Xiang, Yifan Xie, Peiran Xu, Hangjun Ye, Wen Ye, Han Zhao, Quanyun Zhou</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">训练可<u>移动操作</u>的通用视觉-语言-动作(VLA)模型</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">让机器人在<u>未见环境</u>中零样本执行指令并高效适配新任务</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">基于超10万小时<u>真实操作轨迹</u>预训练，结合自动标注管线与<u>指令对齐后训练</u></span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://arxiv.org/abs/2607.15330" class="link-btn" target="_blank">arXiv</a>
-                <a href="https://arxiv.org/pdf/2607.15330" class="link-btn" target="_blank">PDF</a>
             </div>
         </div>
 
