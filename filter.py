@@ -36,7 +36,7 @@ def load_research_interests() -> str:
         sys.exit(1)
 
 BATCH_SIZE = 20
-CLAUDE_CMD = ["claude", "-p", "--print", "--dangerously-skip-permissions", "--model", "claude-sonnet-4-20250514"]
+CLAUDE_CMD = ["claude", "-p", "--print", "--dangerously-skip-permissions", "--model", "claude-sonnet-5"]
 
 
 def build_batch_prompt(batch: list[dict], batch_num: int, total_batches: int) -> str:
