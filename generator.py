@@ -23,14 +23,14 @@ CHINA_TZ = timezone(timedelta(hours=8))
 # Blog theme (matching https://blog.isshikih.top/)
 BG_COLOR = "#ffffff"
 CARD_COLOR = "#ffffff"
-ACCENT_COLOR = "#a27b5c"
+ACCENT_COLOR = "#81a263"
 TEXT_COLOR = "#383838"
 MUTED_COLOR = "#666666"
 LIGHTER_COLOR = "#999999"
 BORDER_COLOR = "#f0f0f0"
 LINK_COLOR = "#383838"
 LINK_HOVER = "#876a53"
-BOLD_COLOR = "#81a263"
+BOLD_COLOR = "#a27b5c"
 FONT_FAMILY = "optima, Philosopher, Helvetica, Arial, Verdana, sans-serif"
 
 
@@ -231,21 +231,20 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
             padding: 3px 10px;
             border-radius: 4px;
             font-size: 0.82rem;
-            color: {LINK_COLOR};
+            color: {MUTED_COLOR};
             border: 1px solid {BORDER_COLOR};
             transition: all 0.2s;
         }}
         .link-btn:hover {{
-            color: {LINK_HOVER};
-            border-color: {LINK_COLOR};
+            color: {ACCENT_COLOR};
+            border-color: {ACCENT_COLOR};
         }}
         .link-btn.project {{
             color: {MUTED_COLOR};
-            border-color: {BORDER_COLOR};
         }}
         .link-btn.project:hover {{
-            color: {LINK_HOVER};
-            border-color: {LINK_COLOR};
+            color: {ACCENT_COLOR};
+            border-color: {ACCENT_COLOR};
         }}
         .empty-state {{
             text-align: center;
@@ -290,7 +289,6 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
         {papers_content}
 
         <footer>
-            <p>Daily Paper Feed · 自动筛选自 arXiv</p>
         </footer>
     </div>
 </body>
