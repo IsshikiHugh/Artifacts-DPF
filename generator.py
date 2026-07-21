@@ -23,7 +23,7 @@ CHINA_TZ = timezone(timedelta(hours=8))
 # IroSilent theme colors (matching https://scholar.isshikih.top/)
 BG_COLOR = "#fffcf5"
 CARD_COLOR = "#fffcf5"
-ACCENT_COLOR = "#808d7c"
+ACCENT_COLOR = "#81a264"
 TEXT_COLOR = "#40534c"
 MUTED_COLOR = "#677d6a"
 LIGHTER_COLOR = "#96a197"
