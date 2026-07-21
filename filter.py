@@ -68,6 +68,8 @@ If relevant, provide:
 3. solution: What approach does it propose? Use plain, easy-to-understand Chinese. (1-2 sentences, < 60 chars total)
 4. project_page_url: Extract from the abstract any project page URL (like https://*.github.io or https://*.com), or null if none found.
 
+**Bolding rule:** In each of the three Chinese summary fields, wrap **1-2 key technical terms** in `**` for emphasis. This helps ADHD readers scan quickly. Keep bolding sparse — only the most important concept per field. Example: "利用**预训练视频模型**的运动先验，通过**轻量适配器**转成3D场景流预测"
+
 OUTPUT FORMAT: ONLY output a valid JSON array. No other text. Each element is:
 {{
   "arxiv_id": "the arxiv id",

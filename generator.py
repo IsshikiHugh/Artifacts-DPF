@@ -13,6 +13,7 @@ Usage: python3 generator.py < filtered.json
 
 import json
 import os
+import re
 import sys
 from datetime import datetime, timezone, timedelta
 
@@ -50,6 +51,11 @@ def extract_project_url(entry: dict) -> str | None:
     return entry.get("project_page_url") or None
 
 
+def render_bold(text: str) -> str:
+    """Convert **bold** markdown to <strong> for HTML rendering."""
+    return re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
+
+
 def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str:
     """Generate the main HTML page."""
     cards_html = []
@@ -80,15 +86,15 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">{task}</span>
+                    <span class="summary-text">{render_bold(task)}</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">{motivation}</span>
+                    <span class="summary-text">{render_bold(motivation)}</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">{solution}</span>
+                    <span class="summary-text">{render_bold(solution)}</span>
                 </div>
             </div>
             {links_html}
