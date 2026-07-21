@@ -25,6 +25,7 @@ BG_COLOR = "#fffcf5"
 CARD_COLOR = "#fffcf5"
 ACCENT_COLOR = "#81a264"
 TEXT_COLOR = "#40534c"
+LABEL_COLOR = "#a39c8e"
 MUTED_COLOR = "#677d6a"
 LIGHTER_COLOR = "#96a197"
 BORDER_COLOR = "#eee7e1"
@@ -209,7 +210,7 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
             flex-shrink: 0;
             font-size: 0.78rem;
             font-weight: 600;
-            color: {ACCENT_COLOR};
+            color: {LABEL_COLOR};
             padding: 1px 6px;
             min-width: 56px;
         }}
