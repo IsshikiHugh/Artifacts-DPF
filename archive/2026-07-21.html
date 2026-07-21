@@ -167,7 +167,7 @@
         <header>
             <h1>Daily Paper Feed</h1>
             <div class="subtitle">
-                2026 年 07 月 21 日 星期二 · 共 26 篇相关论文 ·
+                2026 年 07 月 21 日 星期二 · 共 31 篇相关论文 ·
                 <a href="index.html">全部存档</a>
             </div>
         </header>
@@ -181,15 +181,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">无人机视角下MLLM自身状态与环境双重时空推理基准</span>
+                    <span class="summary-text">评测MLLM对无人机自身状态与外部环境的时空推理能力</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有无人机基准缺乏自我状态与环境的联合推理评测</span>
+                    <span class="summary-text">现有无人机基准只测场景理解，缺乏自身状态与环境的联合认知评测</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">基于语义点云自动构建多视角图文QA基准,含空间/时间定位任务</span>
+                    <span class="summary-text">基于语义点云自动构建多视角基准，考察<strong>空间定位</strong>与<strong>时间区间定位</strong>能力</span>
                 </div>
             </div>
             
@@ -207,15 +207,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">从单目视频预测人-物交互中物体的未来3D运动轨迹</span>
+                    <span class="summary-text">由单目视频预测人机交互后物体的未来3D运动轨迹</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有方法依赖特定物体假设,难以泛化到多样交互场景</span>
+                    <span class="summary-text">让模型像人一样预判交互后物体的物理运动走向</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">复用预训练视频模型与3D跟踪器先验,轻量适配器将回溯跟踪转为前向预测</span>
+                    <span class="summary-text">复用<strong>预训练视频模型</strong>的运动先验，训练轻量<strong>适配器</strong>转为未来3D场景流预测</span>
                 </div>
             </div>
             
@@ -233,15 +233,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">视频扩散模型长序列自注意力的计算效率问题</span>
+                    <span class="summary-text">解决<strong>视频生成</strong>中多GPU稀疏注意力的负载不均问题</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">自适应稀疏注意力在多GPU并行下负载不均,形成掉队瓶颈</span>
+                    <span class="summary-text">自适应稀疏路由使各注意力头负载不均，形成拖慢全局的长尾</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">运行时负载均衡迁移重负载头,并用稀疏增强填补空闲算力</span>
+                    <span class="summary-text">运行时<strong>负载均衡</strong>迁移重头，配合<strong>稀疏增强</strong>填充空闲算力提速</span>
                 </div>
             </div>
             
@@ -259,15 +259,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">长视频定位问答(需同时给答案与证据区间)</span>
+                    <span class="summary-text">长视频<strong>定位问答</strong>：既要答对问题也要定位证据区间</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有单向裁剪式agent易过早收敛,无法回溯纠错</span>
+                    <span class="summary-text">现有agent只能由粗到细裁剪，出错后无法回溯纠正</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">将视频建模为自适应时间树,训练agent用缩放/平移/回退操作自纠错搜索</span>
+                    <span class="summary-text">构建自适应<strong>时间树</strong>，训练agent用缩放/平移/回退实现<strong>自我纠错式搜索</strong></span>
                 </div>
             </div>
             
@@ -285,15 +285,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">评测MLLM主动视觉观察(动态调整注视)能力的基准</span>
+                    <span class="summary-text">评测MLLM是否具备<strong>主动视觉观察</strong>（反复重新聚焦）能力</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有视觉语言基准多是单次静态描述,无法衡量主动感知</span>
+                    <span class="summary-text">人类靠不断重新看来验证假设，现有基准只测单次静态描述</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">设计17项需反复视觉感知的任务,发现前沿MLLM远逊于人类</span>
+                    <span class="summary-text">提出17项任务的ActiveVision基准，前沿MLLM得分远低于人类</span>
                 </div>
             </div>
             
@@ -311,15 +311,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">利用3D点云视觉输入定位物体表面的触觉接触点</span>
+                    <span class="summary-text">在<strong>视觉点云</strong>上定位触觉传感器的接触位置</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">视触觉模态空间对齐存在局部-全局对应歧义</span>
+                    <span class="summary-text">视触觉模态空间对齐难，单点触觉存在局部-全局对应歧义</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">几何多模态对齐模块重建伪点云并与视觉点云对齐,迭代更新定位结果</span>
+                    <span class="summary-text">用<strong>几何多模态对齐</strong>重建伪点云，再迭代更新精化接触定位</span>
                 </div>
             </div>
             
@@ -337,15 +337,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">面向长视频的开源视听大模型联合理解与推理</span>
+                    <span class="summary-text">面向<strong>长视频</strong>的音频-视觉联合理解与推理</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有视听LLM局限于短片段,难处理长时序复杂场景</span>
+                    <span class="summary-text">现有视听LLM多聚焦短片段，难支撑长时序多事件推理</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">三阶段课程学习加时间视听交织思维链,将推理步骤对齐时间戳</span>
+                    <span class="summary-text">三阶段课程训练结合<strong>时序视听交错思维链</strong>，推理步骤对齐时间戳</span>
                 </div>
             </div>
             
@@ -363,15 +363,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">分析VLM在组合式视觉问答中的失败机制</span>
+                    <span class="summary-text">剖析VLM在<strong>组合式视觉问答</strong>中的失败机制</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">已有研究多看整体性能,未揭示失败源于哪个推理环节</span>
+                    <span class="summary-text">已知VLM哪里错却不知为何错，难以针对性修复</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出以操作为中心的机制框架,区分定位/推理/属性提取等失败类型及其内部通路</span>
+                    <span class="summary-text">提出操作中心机制框架，定位<strong>视觉定位失败</strong>等四类失败模式及内部通路</span>
                 </div>
             </div>
             
@@ -389,15 +389,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">面向VLA模型的多租户训练评估云服务平台</span>
+                    <span class="summary-text">构建面向VLA模型的多租户后训练云服务</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">独占式算力服务导致短任务成本高、资源利用率低</span>
+                    <span class="summary-text">独占GPU资源方式使<strong>VLA微调</strong>成本高、资源利用率低</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">解耦训练/推理/环境三大服务，多租户共享底座模型并支持异构数据分组批处理</span>
+                    <span class="summary-text">解耦训练/推理/环境服务，共享基座模型+<strong>租户专属插槽</strong>，支持<strong>批量调度</strong>多任务训练与评测</span>
                 </div>
             </div>
             
@@ -409,21 +409,74 @@
 
         <div class="paper-card">
             <h2 class="paper-title">
+                <a href="https://arxiv.org/abs/2607.16012" target="_blank">DPNeXt: A Lightweight Multi-Scale Feature Fusion Framework for Efficient ViT-Based Multi-Task Dense Prediction</a>
+            </h2>
+            <div class="paper-authors">Jehun Kang, Jungha Wang, Youngjun Hwang, David Hyunchul Shim</div>
+            <div class="paper-summary">
+                <div class="summary-row">
+                    <span class="summary-label">任务设定</span>
+                    <span class="summary-text">基于ViT的机器人<strong>多任务密集预测</strong>（语义分割+深度估计）</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">痛点动机</span>
+                    <span class="summary-text">现有DPT解码策略限制<strong>冻结视觉基础模型</strong>的高效利用</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">解决方案</span>
+                    <span class="summary-text">提出轻量<strong>多尺度特征融合解码器</strong>DPNeXt，配合边界引导监督策略，大幅减少参数量</span>
+                </div>
+            </div>
+            
+            <div class="paper-links">
+                <a href="https://arxiv.org/abs/2607.16012" class="link-btn" target="_blank">arXiv</a>
+                <a href="https://arxiv.org/pdf/2607.16012" class="link-btn" target="_blank">PDF</a>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <h2 class="paper-title">
+                <a href="https://arxiv.org/abs/2607.15974" target="_blank">Embodied Active Learning under Limited Annotation and Navigation Budget for Object Detection</a>
+            </h2>
+            <div class="paper-authors">Hadrien Crassous, Mohamed Yassine Kabouri, Minahil Raza, Joni Pajarinen, Riad Akrour</div>
+            <div class="paper-summary">
+                <div class="summary-row">
+                    <span class="summary-label">任务设定</span>
+                    <span class="summary-text">在有限导航与标注预算下自适应场景目标检测</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">痛点动机</span>
+                    <span class="summary-text">场景迁移检测易失效，标注与探索代价都很高</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">解决方案</span>
+                    <span class="summary-text">提出<strong>具身主动学习</strong>框架，利用<strong>空间一致性</strong>挑选高信息量轨迹与图像重训练检测器</span>
+                </div>
+            </div>
+            
+            <div class="paper-links">
+                <a href="https://arxiv.org/abs/2607.15974" class="link-btn" target="_blank">arXiv</a>
+                <a href="https://arxiv.org/pdf/2607.15974" class="link-btn" target="_blank">PDF</a>
+                <a href="https://mkabouri.github.io/embodied-active-learning-od" class="link-btn project" target="_blank">Project Page</a>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <h2 class="paper-title">
                 <a href="https://arxiv.org/abs/2607.15898" target="_blank">Orbis 2: A Hierarchical World Model for Driving</a>
             </h2>
             <div class="paper-authors">Sudhanshu Mittal, Arian Mousakhan, Silvio Galesso, Karim Farid, Jonannes Dienert, Rajat Sahay, Thomas Brox</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">构建分层驾驶场景世界模型预测未来场景</span>
+                    <span class="summary-text">面向自动驾驶场景的<strong>分层世界模型</strong>未来预测</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有世界模型单一抽象层级，难兼顾保真与语义理解</span>
+                    <span class="summary-text">现有世界模型难兼顾感知保真度与空间语义理解</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">高层预测粗略场景结构，低层生成细节；结合扩散强制预训练与教师强制微调</span>
+                    <span class="summary-text">分<strong>高层粗粒度</strong>与<strong>低层细节生成</strong>两级，结合<strong>扩散强制</strong>预训练与教师强制微调</span>
                 </div>
             </div>
             
@@ -441,15 +494,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">依据视觉语言指令预测第一人称3D手部姿态</span>
+                    <span class="summary-text">结合视觉语言预测<strong>第一人称3D手部姿态</strong>的未来动作</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">第一人称视野有限、手部运动动态剧烈，预测困难</span>
+                    <span class="summary-text">第一人称视角受限且动态剧烈，姿态预测易失准</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用第三人称示范视频作指导，双层重建与全局到局部调制模块补充第一人称信息</span>
+                    <span class="summary-text">利用<strong>第三人称示范</strong>作为稳定指导，通过分层重建与<strong>全局到局部调制</strong>弥补第一人称局限</span>
                 </div>
             </div>
             
@@ -467,15 +520,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">头戴设备联合估计自身与他人的三维动作</span>
+                    <span class="summary-text">用<strong>头戴设备</strong>联合捕捉佩戴者及周围人的3D动作</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">以往第一/第三视角追踪割裂,难以互补融合</span>
+                    <span class="summary-text">传统动捕依赖多机位或穿戴动捕服,难用于真实场景</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">多人各戴智能眼镜,融合头腕追踪信号与DINOv3图像特征分布式重建动作</span>
+                    <span class="summary-text">融合头/腕追踪信号与<strong>DINOv3</strong>图像特征,分布式估计全局人体动作</span>
                 </div>
             </div>
             
@@ -493,15 +546,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">自回归视频扩散模型生成任意长度视频</span>
+                    <span class="summary-text"><strong>自回归视频扩散</strong>生成长视频时的质量退化问题</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">长视频生成误差累积,轨迹易陷入无法继续的终止点</span>
+                    <span class="summary-text">误差累积使生成轨迹偏离训练分布,陷入<strong>终止点</strong>难以继续</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">测试时以噪声预测偏差为引导搜索替代轨迹,避免陷入终止点</span>
+                    <span class="summary-text">把扩散模型当自身评判器,测试时用噪声偏差引导轨迹避开终止点</span>
                 </div>
             </div>
             
@@ -519,15 +572,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">长视频多事件理解与关键片段时序定位</span>
+                    <span class="summary-text">长视频<strong>多事件理解</strong>中关键帧选择与细粒度感知</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">视觉token预算有限,难以兼顾多个关键事件的细粒度感知</span>
+                    <span class="summary-text">视觉token预算有限,难以兼顾多个关键事件的定位与理解</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">正负片段定位模块与动态粒度反思模块循环协同,强化学习优化定位策略</span>
+                    <span class="summary-text">设计<strong>动态粒度</strong>模块,迭代做<strong>时序定位</strong>并自反思调整编码精细度</span>
                 </div>
             </div>
             
@@ -545,22 +598,21 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">多角色叙事性长视频生成中的角色一致性维持</span>
+                    <span class="summary-text">长篇叙事视频生成中保持多角色身份一致</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有记忆机制将身份与视觉因素纠缠,且缺乏持续更新方式</span>
+                    <span class="summary-text">现有记忆机制粗粒度、纠缠视觉因素，缺乏持续更新</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用角色语义探针定位角色token,压缩为槽记忆,按角色寻址更新与交叉注意力检索注入</span>
+                    <span class="summary-text">提出<strong>角色可寻址记忆</strong>，用槽位分别压缩编码各角色，并靠<strong>角色级交叉注意力</strong>定向注入</span>
                 </div>
             </div>
             
             <div class="paper-links">
                 <a href="https://arxiv.org/abs/2607.15772" class="link-btn" target="_blank">arXiv</a>
                 <a href="https://arxiv.org/pdf/2607.15772" class="link-btn" target="_blank">PDF</a>
-                <a href="https://github.com/YilaiLiu-HKU/SlotMem" class="link-btn project" target="_blank">Project Page</a>
             </div>
         </div>
 
@@ -572,15 +624,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">多模态大模型坐标生成式视觉定位任务</span>
+                    <span class="summary-text">MLLM视觉定位中坐标生成与IoU评价不匹配</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">训练用token似然优化,与IoU几何评测目标存在偏差</span>
+                    <span class="summary-text">训练优化token似然，评测却看几何重叠，两者存在偏差</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用真实框做特权信息蒸馏教师模型,IoU感知的token权重指导学生训练,推理无需额外输入</span>
+                    <span class="summary-text">提出<strong>IoU感知特权蒸馏</strong>，让看得到标注框的教师模型指导学生精细定位</span>
                 </div>
             </div>
             
@@ -592,21 +644,47 @@
 
         <div class="paper-card">
             <h2 class="paper-title">
+                <a href="https://arxiv.org/abs/2607.15727" target="_blank">Event3R: Asynchronous-to-Global 3D Reconstruction from Event Camera via Spatial-Temporal Feature Aggregation</a>
+            </h2>
+            <div class="paper-authors">Jian Huang, Haotian Shen, Xinhao Lou, Chengrui Dong, Wenpu Li, Peidong Liu</div>
+            <div class="paper-summary">
+                <div class="summary-row">
+                    <span class="summary-label">任务设定</span>
+                    <span class="summary-text">用事件相机做前馈式全局一致3D重建</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">痛点动机</span>
+                    <span class="summary-text">事件流异步稀疏且缺标注数据，难以扩展DUSt3R式方法</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">解决方案</span>
+                    <span class="summary-text">提出<strong>Event3R</strong>，将事件编码为时空体素，用<strong>掩码分箱自监督</strong>预训练增强重建</span>
+                </div>
+            </div>
+            
+            <div class="paper-links">
+                <a href="https://arxiv.org/abs/2607.15727" class="link-btn" target="_blank">arXiv</a>
+                <a href="https://arxiv.org/pdf/2607.15727" class="link-btn" target="_blank">PDF</a>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <h2 class="paper-title">
                 <a href="https://arxiv.org/abs/2607.15717" target="_blank">Per-Stroke Temporal Control for Text-to-Motion via Action Units and Action-Detection Guidance</a>
             </h2>
             <div class="paper-authors">Euijun Jung, Youngki Lee</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">文本生成动作中每个动作单元的精确时序控制</span>
+                    <span class="summary-text">文本生成动作时精细控制每一招的时序节拍</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有模型难以控制动作发生的具体时刻、顺序与轨迹</span>
+                    <span class="summary-text">现有模型只认动作类别，难以区分连续同类招式的落点时间</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">引入动作单元作条件信号,轻量适配器注入,推理时用检测器梯度校正时机误差</span>
+                    <span class="summary-text">引入<strong>动作单元(Action Unit)</strong>显式条件，配合<strong>无训练分类器梯度</strong>推理时修正时序</span>
                 </div>
             </div>
             
@@ -618,21 +696,47 @@
 
         <div class="paper-card">
             <h2 class="paper-title">
+                <a href="https://arxiv.org/abs/2607.15689" target="_blank">Efficient Frame Selection for Long Videos at Test Time with Attention-Based MLLM Selectors</a>
+            </h2>
+            <div class="paper-authors">Yilin Wang, Xiangxi Zheng, Dongxing Mao, Linjie Li, Zhengyuan Yang, Ping Yu, Rui Yan, Yuan Yao, Alex Jinpeng Wang</div>
+            <div class="paper-summary">
+                <div class="summary-row">
+                    <span class="summary-label">任务设定</span>
+                    <span class="summary-text">长视频理解中如何从海量帧里选出关键帧</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">痛点动机</span>
+                    <span class="summary-text">选帧似乎要先看懂视频，形成循环依赖，还要兼顾效率</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">解决方案</span>
+                    <span class="summary-text">利用MLLM<strong>跨模态注意力</strong>免生成直接算帧相关性，<strong>动态规划</strong>联合优化候选与token预算</span>
+                </div>
+            </div>
+            
+            <div class="paper-links">
+                <a href="https://arxiv.org/abs/2607.15689" class="link-btn" target="_blank">arXiv</a>
+                <a href="https://arxiv.org/pdf/2607.15689" class="link-btn" target="_blank">PDF</a>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <h2 class="paper-title">
                 <a href="https://arxiv.org/abs/2607.15667" target="_blank">PE-Field 4D: Video Generation Models as Canvas</a>
             </h2>
             <div class="paper-authors">Yunpeng Bai, Haoxiang Li, Qixing Huang</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">视频扩散模型中可控场景几何与视角生成</span>
+                    <span class="summary-text">视频扩散模型中实现几何感知的相机视角可控生成</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有视频生成模型难以精确控制相机运动下的几何一致性</span>
+                    <span class="summary-text">视角变化与相机运动下场景几何的可控性难以保证</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">利用位置编码的空间偏置设计几何感知交叉注意力,按投影位置对齐参考帧实现可控视角合成</span>
+                    <span class="summary-text">提出<strong>几何感知交叉注意力</strong>，用<strong>投影位置编码</strong>让生成视频对齐参考帧空间位置</span>
                 </div>
             </div>
             
@@ -650,15 +754,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">加速DiT多节点并行图像/视频生成推理</span>
+                    <span class="summary-text">多节点并行加速<strong>DiT扩散</strong>生成推理</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">多节点并行生成时通信开销过大,难以扩展</span>
+                    <span class="summary-text"><strong>上下文并行</strong>通信开销大,难以扩展到多机</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">利用空间邻近分区注意力贡献更大的特点,选择性复用历史注意力状态,减少通信提速最高3.2倍</span>
+                    <span class="summary-text">发现空间邻近分区贡献更大,提出<strong>选择性注意力状态复用</strong>降低通信,提速1.9倍</span>
                 </div>
             </div>
             
@@ -676,15 +780,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">评测机器人直觉式操作中推理与执行的结合能力</span>
+                    <span class="summary-text">评测机器人<strong>直觉操作</strong>的综合能力</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有基准割裂物理推理与动作执行,无法综合评估</span>
+                    <span class="summary-text">现有基准割裂了物理推理与动作执行的评估</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">构建35任务14K轨迹的IMBench,要求模型推断物理结构并生成可执行动作序列完成任务</span>
+                    <span class="summary-text">构建35个任务、1.4万条轨迹,要求<strong>感知-推理-执行</strong>闭环完成接触式操作与工具使用</span>
                 </div>
             </div>
             
@@ -702,15 +806,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">端到端自动驾驶中VLA模型的实时闭环控制</span>
+                    <span class="summary-text">自动驾驶中<strong>VLA模型</strong>的实时闭环控制</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">大模型推理延迟与车辆控制频率冲突,现有方法隔帧复用指令丢失新观测</span>
+                    <span class="summary-text">大模型推理延迟跟不上车辆控制频率,导致丢帧</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">快慢双系统架构:冻结VLM低频提取场景KV缓存,轻量动作专家逐帧结合缓存回归路点,训练中随机化缓存延迟以适应异步执行</span>
+                    <span class="summary-text"><strong>快慢双系统架构</strong>:慢速VLM缓存场景KV,快速动作专家逐帧回归路径点,随机延迟训练适配异步部署</span>
                 </div>
             </div>
             
@@ -722,21 +826,47 @@
 
         <div class="paper-card">
             <h2 class="paper-title">
+                <a href="https://arxiv.org/abs/2607.15600" target="_blank">Geometric Distillation from Rectified Stereo: Leveraging Epipolar Cues for Monocular Depth</a>
+            </h2>
+            <div class="paper-authors">Jung-Hee Kim, Xiaoming Liu</div>
+            <div class="paper-summary">
+                <div class="summary-row">
+                    <span class="summary-label">任务设定</span>
+                    <span class="summary-text"><strong>单目深度估计</strong>中的尺度模糊问题</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">痛点动机</span>
+                    <span class="summary-text">单视图缺乏几何约束,度量深度尺度常与预测错位</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">解决方案</span>
+                    <span class="summary-text">用<strong>极线蒸馏</strong>把多视图立体的尺度先验迁移进单目模型,推理时仍只需单张图</span>
+                </div>
+            </div>
+            
+            <div class="paper-links">
+                <a href="https://arxiv.org/abs/2607.15600" class="link-btn" target="_blank">arXiv</a>
+                <a href="https://arxiv.org/pdf/2607.15600" class="link-btn" target="_blank">PDF</a>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <h2 class="paper-title">
                 <a href="https://arxiv.org/abs/2607.15565" target="_blank">Ask Twice, Look Twice: Prompt Echoing Resolves the Question-First Paradox in Vision-Language Models</a>
             </h2>
             <div class="paper-authors">Rakshanda Hassan Abhinandan, John Galeotti, Deva Ramanan, Gautam Rajendrakumar Gare</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">研究VLM提示中问题放图像前还是后更好</span>
+                    <span class="summary-text">研究VLM提问应放在图像前还是图像后</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">问题置于图像后时几乎不被关注,导致模型依赖图像误答</span>
+                    <span class="summary-text">问题前置能引导<strong>视觉感知</strong>但答案token难以关注到问题</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出提示回声:图像前后各放一次问题,兼顾感知引导与答案读取</span>
+                    <span class="summary-text">提出<strong>问题回声</strong>法：图像前后各放一份问题，前者引导感知，后者供<strong>答案读取</strong></span>
                 </div>
             </div>
             
@@ -754,15 +884,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">基于关键点运动表示的实时跌倒检测方法比较</span>
+                    <span class="summary-text">对比有监督与<strong>无监督关键点</strong>用于实时跌倒检测</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">RGB视频监控存在隐私、算力和带宽三重限制</span>
+                    <span class="summary-text">遮挡和隐私限制使基于RGB视频的跌倒监测难以部署</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用无监督关键点替代原始视频传输,结合时序预测模型判断跌倒,遮挡场景下更鲁棒</span>
+                    <span class="summary-text">用<strong>无监督关键点</strong>替代RGB传输，结合<strong>变分时序预测</strong>判断跌倒，兼顾隐私与遮挡鲁棒性</span>
                 </div>
             </div>
             
@@ -780,15 +910,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">MLLM根据语言查询定位物体的具体部件</span>
+                    <span class="summary-text">MLLM根据语言查询定位物体的<strong>部件</strong>区域</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">部件与物体用同一步定位，缺失层级关系导致定位失败</span>
+                    <span class="summary-text">现有方法忽略<strong>物体-部件层级</strong>，导致部件定位不准</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">先定位父物体再定位部件，自检复核预测区域，用分阶段奖励的GRPO训练</span>
+                    <span class="summary-text">提出<strong>由粗到细</strong>分层定位（先物体后部件），用<strong>强化学习</strong>(GRPO)配合自检反思训练</span>
                 </div>
             </div>
             
@@ -806,15 +936,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">开放词汇的少样本3D点云场景分割</span>
+                    <span class="summary-text"><strong>开放词汇</strong>3D点云场景分割中的新类别识别</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有方法需训练、3D标注及少样本支持集，成本较高</span>
+                    <span class="summary-text">现有方法依赖基础类标注、逐场景训练及少样本支持，<strong>成本高</strong></span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用冻结的3D视觉语言模型与SAM3提示新类名，跨视角一致性融合结果，全程免训练</span>
+                    <span class="summary-text">融合冻结的<strong>3D视觉语言模型</strong>与<strong>SAM3</strong>，通过跨视角一致性投票实现全程免训练分割</span>
                 </div>
             </div>
             
@@ -832,15 +962,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">训练可泛化的视觉-语言-动作移动操作模型</span>
+                    <span class="summary-text">训练可<strong>移动操作</strong>的通用视觉-语言-动作(VLA)模型</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">机器人需在陌生环境执行多样任务并快速适应新任务</span>
+                    <span class="summary-text">让机器人在<strong>未见环境</strong>中零样本执行指令并高效适配新任务</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用超10万小时真实轨迹两阶段训练，自动标注场景转移描述辅助动作学习</span>
+                    <span class="summary-text">基于超10万小时<strong>真实操作轨迹</strong>预训练，结合自动标注管线与<strong>指令对齐后训练</strong></span>
                 </div>
             </div>
             
