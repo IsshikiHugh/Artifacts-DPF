@@ -165,15 +165,18 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
             border: 1px solid {BORDER_COLOR};
             border-radius: 8px;
             padding: 24px 28px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid {BORDER_COLOR};
+            margin-bottom: 24px;
+            box-shadow: 2px 2px 3px #f8f3ef,
+                        2px 2px 7px #f8f3ef,
+                        -1px -1px 3px #f8f3ef,
+                        -1px -1px 7px #f8f3ef;
+            transition: box-shadow 0.2s;
             position: relative;
         }}
-        .paper-card:last-child {{
-            border-bottom: none;
-        }}
         .paper-card:hover {{
-            border-color: {ACCENT_COLOR};
+            box-shadow: 0px 0px 3px #eee7e1,
+                        1px 1px 4px #eee7e1,
+                        1px 1px 8px #eee7e1;
         }}
         .paper-title {{
             font-size: 1.05rem;
