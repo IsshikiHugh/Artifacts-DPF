@@ -52,8 +52,8 @@ def extract_project_url(entry: dict) -> str | None:
 
 
 def render_bold(text: str) -> str:
-    """Convert **bold** markdown to <strong> for HTML rendering."""
-    return re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
+    """Convert **bold** markdown to <u> for HTML rendering (underline for ADHD readability)."""
+    return re.sub(r'\*\*(.+?)\*\*', r'<u>\1</u>', text)
 
 
 def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str:
