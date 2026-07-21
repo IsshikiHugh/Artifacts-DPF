@@ -20,17 +20,18 @@ from datetime import datetime, timezone, timedelta
 # China timezone
 CHINA_TZ = timezone(timedelta(hours=8))
 
-# Blog theme (matching https://blog.isshikih.top/)
-BG_COLOR = "#ffffff"
-CARD_COLOR = "#ffffff"
-ACCENT_COLOR = "#81a263"
-TEXT_COLOR = "#383838"
-MUTED_COLOR = "#666666"
-LIGHTER_COLOR = "#999999"
-BORDER_COLOR = "#f0f0f0"
-LINK_COLOR = "#383838"
-LINK_HOVER = "#876a53"
-BOLD_COLOR = "#a27b5c"
+# IroSilent theme colors (matching https://scholar.isshikih.top/)
+BG_COLOR = "#fffcf5"
+CARD_COLOR = "#fffcf5"
+ACCENT_COLOR = "#5f6f65"
+TEXT_COLOR = "#40534c"
+MUTED_COLOR = "#677d6a"
+LIGHTER_COLOR = "#96a197"
+BORDER_COLOR = "#eee7e1"
+LINK_COLOR = "#81a263"
+LINK_HOVER = "#538392"
+SHADOW_COLOR = "#f8f3ef"
+SHADOW_HOVER = "#eee7e1"
 FONT_FAMILY = "optima, Philosopher, Helvetica, Arial, Verdana, sans-serif"
 
 
@@ -51,7 +52,7 @@ def extract_project_url(entry: dict) -> str | None:
 
 
 def render_bold(text: str) -> str:
-    """Convert **bold** markdown to <strong class="kw"> for HTML rendering (sage green)."""
+    """Convert **bold** markdown to <strong class="kw"> for HTML rendering."""
     return re.sub(r'\*\*(.+?)\*\*', r'<strong class="kw">\1</strong>', text)
 
 
@@ -166,17 +167,17 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
             border-radius: 8px;
             padding: 24px 28px;
             margin-bottom: 24px;
-            box-shadow: 2px 2px 3px #f8f3ef,
-                        2px 2px 7px #f8f3ef,
-                        -1px -1px 3px #f8f3ef,
-                        -1px -1px 7px #f8f3ef;
+            box-shadow: 2px 2px 3px {SHADOW_COLOR},
+                        2px 2px 7px {SHADOW_COLOR},
+                        -1px -1px 3px {SHADOW_COLOR},
+                        -1px -1px 7px {SHADOW_COLOR};
             transition: box-shadow 0.2s;
             position: relative;
         }}
         .paper-card:hover {{
-            box-shadow: 0px 0px 3px #eee7e1,
-                        1px 1px 4px #eee7e1,
-                        1px 1px 8px #eee7e1;
+            box-shadow: 0px 0px 3px {SHADOW_HOVER},
+                        1px 1px 4px {SHADOW_HOVER},
+                        1px 1px 8px {SHADOW_HOVER};
         }}
         .paper-title {{
             font-size: 1.05rem;
@@ -218,7 +219,7 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
             line-height: 1.5;
         }}
         .summary-text strong.kw {{
-            color: {BOLD_COLOR};
+            color: {ACCENT_COLOR};
             font-weight: 600;
         }}
         .paper-links {{
@@ -231,20 +232,21 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
             padding: 3px 10px;
             border-radius: 4px;
             font-size: 0.82rem;
-            color: {MUTED_COLOR};
+            color: {LINK_COLOR};
             border: 1px solid {BORDER_COLOR};
             transition: all 0.2s;
         }}
         .link-btn:hover {{
-            color: {ACCENT_COLOR};
-            border-color: {ACCENT_COLOR};
+            color: {LINK_HOVER};
+            border-color: {LINK_COLOR};
         }}
         .link-btn.project {{
             color: {MUTED_COLOR};
+            border-color: {BORDER_COLOR};
         }}
         .link-btn.project:hover {{
-            color: {ACCENT_COLOR};
-            border-color: {ACCENT_COLOR};
+            color: {LINK_HOVER};
+            border-color: {LINK_COLOR};
         }}
         .empty-state {{
             text-align: center;
