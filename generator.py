@@ -69,8 +69,7 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
 
         links_html = f"""
             <div class="paper-links">
-                <a href="{paper['arxiv_url']}" class="link-btn" target="_blank">arXiv</a>
-                <a href="{paper['pdf_url']}" class="link-btn" target="_blank">PDF</a>"""
+                <a href="https://alphaxiv.org/abs/{paper['arxiv_id']}" class="link-btn" target="_blank">alphaXiv</a>"""
 
         if proj_url:
             links_html += f'\n                <a href="{proj_url}" class="link-btn project" target="_blank">Project Page</a>'

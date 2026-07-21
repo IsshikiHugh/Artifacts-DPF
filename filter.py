@@ -36,7 +36,7 @@ def load_research_interests() -> str:
         sys.exit(1)
 
 BATCH_SIZE = 20
-CLAUDE_CMD = ["claude", "-p", "--print", "--dangerously-skip-permissions", "--model", "claude-sonnet-5"]
+CLAUDE_CMD = ["claude", "-p", "--print", "--dangerously-skip-permissions", "--model", "claude-sonnet-5", "--append-system-prompt", "请在中文和英文/数字之间加一个空格。例如：'利用预训练视频模型' → '利用 预训练视频模型'"]
 
 
 def build_batch_prompt(batch: list[dict], batch_num: int, total_batches: int) -> str:
