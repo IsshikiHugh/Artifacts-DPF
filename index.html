@@ -173,7 +173,7 @@
         <header>
             <h1>Daily Paper Feed</h1>
             <div class="subtitle">
-                2026 年 07 月 21 日 星期二 · 共 28 篇相关论文 ·
+                2026 年 07 月 21 日 星期二 · 共 31 篇相关论文 ·
                 <a href="archive/">历史存档</a>
             </div>
         </header>
@@ -181,702 +181,779 @@
         
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.16193" target="_blank">Knowing the Self, Understanding the World: A Dual-Cognition Benchmark for UAV Spatio-temporal Reasoning with MLLMs</a>
+                <a href="https://arxiv.org/abs/2607.18200" target="_blank">Learning Adaptive Safety Margins for Visual Navigation</a>
             </h2>
-            <div class="paper-authors">Like Liu, Zhengzheng Xu, Haitao He, Hongzhe Li, Shuchang Zhang, Dian Shao</div>
+            <div class="paper-authors">Junyi Hu, Shuaihang Yuan, Geeta Chandra Raju Bethala, Anthony Tzes, Yi Fang</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">评测<strong class="kw">多模态大模型</strong>在无人机场景下的双重认知时空推理</span>
+                    <span class="summary-text">视觉导航中为<strong class="kw">扩散规划</strong>轨迹自适应选安全边界</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有无人机基准缺乏<strong class="kw">自身状态</strong>与环境联合推理评测</span>
+                    <span class="summary-text">固定安全边界会导致绕路超时或冒险抄近道</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">构建 <strong class="kw">UAV-DualCog</strong> 基准,基于语义点云自动生成时空定位问答数据</span>
+                    <span class="summary-text">用<strong class="kw">情境安全评价器</strong>给候选轨迹打分排序，蒸馏为纯感知选择器，可迁移到 Unitree G1 人形机器人</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.16193" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.18200" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.16192" target="_blank">MotionForesight: Re-purposing Video Models for Future 3D Scene-Flow Prediction</a>
+                <a href="https://arxiv.org/abs/2607.18062" target="_blank">UniETP: Unifying Environments for Generalizable Embodied Task Planning</a>
             </h2>
-            <div class="paper-authors">Homanga Bharadhwaj, Yash Jangir</div>
+            <div class="paper-authors">Peiran Xu, Jiaqi Zheng, Ziyou Wang, Yadong Mu</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">预测<strong class="kw">人-物交互</strong>视频中物体的未来 3D 运动轨迹</span>
+                    <span class="summary-text">统一多种仿真器评测<strong class="kw">具身任务规划</strong></span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有方法依赖大量数据或<strong class="kw">语言先验</strong>,难以泛化到分布外物体</span>
+                    <span class="summary-text">各仿真器观测/动作格式不同,难以统一训练评估</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">复用<strong class="kw">预训练视频模型</strong>的运动先验,轻量适配器转为 3D 场景流预测器</span>
+                    <span class="summary-text">提出 <strong class="kw">UniETP</strong> 统一接口整合 AI2-THOR 等 4 个仿真器,标准化观测动作空间并自动生成多样任务数据</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.16192" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.18062" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://github.com/woyut/UniETP" class="link-btn project" target="_blank">Project Page</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.16190" target="_blank">FVAttn: Adaptive Sparse Attention with Runtime Load Balancing for Video Generation</a>
+                <a href="https://arxiv.org/abs/2607.18042" target="_blank">Anticipate Before Acting: Future-State-Conditioned Vision-Language Navigation</a>
             </h2>
-            <div class="paper-authors">Hao Liu, Chenghuan Huang, Ye Huang, Zhiying Wen, Hao Liu, Mohan Zhang, Chen Li, Ziyang Ma, Jing Lyu, Jiangsu Du</div>
+            <div class="paper-authors">Lingfeng Zhang, Zhanguang Zhang, Liheng Ma, Tongtong Cao, Yingxue Zhang</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">解决<strong class="kw">视频扩散模型</strong>多 GPU 稀疏注意力负载不均问题</span>
+                    <span class="summary-text"><strong class="kw">视觉语言导航</strong>中利用未来观测辅助决策</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">自适应稀疏路由导致各注意力头<strong class="kw">负载不均</strong>,产生掉队瓶颈</span>
+                    <span class="summary-text">传统模仿学习只监督下一步动作,忽略未来视觉预测</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<strong class="kw">运行时负载均衡</strong>,迁移重负载头并填充稀疏空隙,提速 4 倍以上</span>
+                    <span class="summary-text">提出 <strong class="kw">FSC-VLN</strong>,训练时用未来视觉隐向量监督当前状态,推理时无需真实未来图像</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.16190" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.18042" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.16189" target="_blank">Searching Videos as Trees: Self-Correcting Agents for Grounded Long Video QA</a>
+                <a href="https://arxiv.org/abs/2607.17973" target="_blank">SAGE: Subgoal-Conditioned Action Generation for Latent World Model Planning</a>
             </h2>
-            <div class="paper-authors">Ce Zhang, Ziyang Wang, Yulu Pan, Oluwatumininu Oguntola, Pranav Wagh, Qiyu Wu, Hiromi Wakaki, Mohit Bansal, Gedas Bertasius</div>
+            <div class="paper-authors">Letian Cheng, Qi Zhang, Yisen Wang</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">长视频<strong class="kw">接地问答</strong>:回答问题并定位支持证据片段</span>
+                    <span class="summary-text"><strong class="kw">世界模型</strong>长时程规划中的候选动作生成问题</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有单一裁剪操作智能体易过早收敛,无法<strong class="kw">回溯纠错</strong></span>
+                    <span class="summary-text">规划步长增加时,固定候选预算难以覆盖指数级动作空间</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">构建自适应<strong class="kw">时间树</strong>,训练智能体用缩放/平移/回答等操作自我纠错搜索</span>
+                    <span class="summary-text">提出<strong class="kw">子目标条件化</strong>动作生成器,先预测潜在子目标再据此生成候选动作序列,由世界模型评估筛选</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.16189" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17973" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.16165" target="_blank">An Exam for Active Observers</a>
+                <a href="https://arxiv.org/abs/2607.17967" target="_blank">Fine-Detail Monocular Geometry Estimation with Self-Guided Sparse Volumetric Refinement</a>
             </h2>
-            <div class="paper-authors">Jiarui Zhang, Muzi Tao, Shangshang Wang, Ollie Liu, Xuezhe Ma, Willie Neiswanger</div>
+            <div class="paper-authors">Lingyu Kong, Ruicheng Li, Ruicheng Wang, Sicheng Xu, Chengtang Yao, Jianfeng Xiang, Jiaolong Yang</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">评测 MLLM 是否具备<strong class="kw">主动视觉观察</strong>(闭环调整注视)能力</span>
+                    <span class="summary-text"><strong class="kw">单目几何估计</strong>中细节结构(如细长物体)失真问题</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有视觉语言基准仅测<strong class="kw">单次静态描述</strong>,无法反映主动观察需求</span>
+                    <span class="summary-text">2D 参数化解码导致深度不连续处特征混合,细节过平滑</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出 <strong class="kw">ActiveVision</strong> 基准,17 项任务强制反复感知,前沿模型远逊人类</span>
+                    <span class="summary-text">提出<strong class="kw">稀疏体素细化(SSR)</strong>,将粗点图提升到 3D 稀疏体素壳上按空间邻近性精细化</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.16165" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17967" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.16146" target="_blank">VTLoc: Learning-based Tactile Contact Localization in Visual Point Clouds</a>
+                <a href="https://arxiv.org/abs/2607.17861" target="_blank">ConceptTree: Bringing Semantic Transparency to Black-Box Decision Making for Robotic Manipulation</a>
             </h2>
-            <div class="paper-authors">Zhiyuan Wu, Zhuo Chen, Shan Luo</div>
+            <div class="paper-authors">Yongyan Wen, Feifan Liu, Jinyi Chen, Bo An, Peng Liu, Siyuan Li</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">利用 3D 点云定位物体表面的<strong class="kw">触觉接触点</strong></span>
+                    <span class="summary-text">长时程<strong class="kw">机器人操作</strong>中的高层技能选择决策</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">触觉与视觉几何空间对齐难,单点触觉存在<strong class="kw">局部-全局歧义</strong></span>
+                    <span class="summary-text">现有方法把技能选择当<strong class="kw">黑盒映射</strong>，难以监督和干预</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<strong class="kw">视触觉几何对齐模块</strong>与迭代定位更新器,融合视触觉特征优化定位</span>
+                    <span class="summary-text">构建可解释的<strong class="kw">概念空间</strong>，用决策树预测技能，支持逐概念人工修正</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.16146" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17861" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.16107" target="_blank">Audio-Visual Flamingo: Open Audio-Visual Intelligence for Long and Complex Videos</a>
+                <a href="https://arxiv.org/abs/2607.17806" target="_blank">PGN: Design and Implementation of a Vision-Language Navigation System Based on Pangu Multimodal Foundation Model</a>
             </h2>
-            <div class="paper-authors">Sreyan Ghosh, Arushi Goel, Kaousheik Jayakumar, Lasha Koroshinadze, Nishit Anand, Siddharth Gururani, Hanrong Ye, Pritam Biswas, Yuanhang Su, Ehsan Hosseini-Asl, Sang-gil Lee, Zhifeng Kong, Jaehyeon Kim, Sungwon Kim, S Sakshi, Ramani Duraiswami, Dinesh Manocha, Andrew Tao, Mohammad Shoeybi, Bryan Catanzaro, Ming-Yu Liu, Wei Ping</div>
+            <div class="paper-authors">Li Xian, Mingxi Li, Yizheng Wang, Yiming Shen, Qi Chen, Zhuoling Xiao</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">面向长视频的<strong class="kw">音画联合理解</strong>与推理大模型</span>
+                    <span class="summary-text">让具身智能体依据语言指令预测导航动作</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有音视频 LLM 仅聚焦短片段,难以处理长时序复杂推理</span>
+                    <span class="summary-text">视觉语言对齐、动作空间适配与训练稳定性难以兼顾</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">三阶段课程训练+<strong class="kw">时序音画交错思维链</strong>,将推理步骤对齐到时间戳</span>
+                    <span class="summary-text">两阶段训练：<strong class="kw">Q-Former</strong> 做视觉语言对齐，再用 <strong class="kw">LoRA</strong> 微调专家导航轨迹</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.16107" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17806" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.16094" target="_blank">How Do VLMs Fail? Vision-Operation Misalignment in Compositional VQA</a>
+                <a href="https://arxiv.org/abs/2607.17790" target="_blank">ReViV: Reconstructing the Viewer and the View in 4D from Monocular Egocentric Video</a>
             </h2>
-            <div class="paper-authors">Navya Gupta, Bingjie Xu, Avinash Anand, Timothy Liu, Zhengchen Zhang</div>
+            <div class="paper-authors">Xiaozhong Lyu, Gen Li, Zhiyin Qian, Xucong Zhang, Marc Pollefeys, Siyu Tang</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">剖析 VLM 在组合式 VQA 中的<strong class="kw">视觉-操作错位</strong>失败机制</span>
+                    <span class="summary-text">从单目第一人称视频重建 4D 人体与场景</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有分析仅看整体准确率,未揭示具体推理操作出错的<strong class="kw">内在通路</strong></span>
+                    <span class="summary-text">现有方法依赖预计算轨迹，割裂建模人体与场景且推理慢</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出以操作为中心的机制框架,发现<strong class="kw">四种失败模式</strong>及对应计算通路</span>
+                    <span class="summary-text"><strong class="kw">掩码生成式 Transformer</strong> 单前向统一建模 RGB、轨迹、姿态、手部与深度</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.16094" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17790" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.16074" target="_blank">JoyNexus: Service-Oriented Multi-Tenant Post-Training for VLA Models</a>
+                <a href="https://arxiv.org/abs/2607.17786" target="_blank">Reasoning as a Double-Edged Sword: Architecture and Cross-Stage Robustness in Vision-Language-Action Models</a>
             </h2>
-            <div class="paper-authors">Haoran Sun, Wentao Zhang, Junyang Hua, Hedan Yang, Yongjian Guo, Yifei Zhang, Xiaolong Xiang, Mingxi Luo, Jing Long, Chen Zhao, Chen Zhou, Wanting Xu, Qiming Yang, Hui Zhang, Song Wang, Xiaodong Bai, Shuai Di, Xu Chu, Xiaotie Deng, Yicheng Gong, Junwu Xiong</div>
+            <div class="paper-authors">Tuan Duong Trinh, Naveed Akhtar, Basim Azam</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">面向 VLA 模型的<strong class="kw">多租户</strong>后训练服务框架</span>
+                    <span class="summary-text">研究推理机制对 VLA 模型抗扰动鲁棒性的影响</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">独立算力租赁模式使短时突发任务代价高、效率低</span>
+                    <span class="summary-text">直觉认为推理更鲁棒，但缺乏系统性验证与安全信号检验</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">解耦训练、推理与环境服务，共享<strong class="kw">基座模型</strong>并按租户隔离，结合<strong class="kw">分组批处理</strong>提升效率</span>
+                    <span class="summary-text">对比<strong class="kw">无推理、文本 CoT、隐式迭代</strong>三类 VLA，在视觉/推理/动作阶段施加扰动测试</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.16074" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17786" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.16012" target="_blank">DPNeXt: A Lightweight Multi-Scale Feature Fusion Framework for Efficient ViT-Based Multi-Task Dense Prediction</a>
+                <a href="https://arxiv.org/abs/2607.17778" target="_blank">CDIS: Cross-Dimensional Class-Agnostic 3D Instance Segmentation via 2D Mask Tracking and 3D-2D Projection Merging</a>
             </h2>
-            <div class="paper-authors">Jehun Kang, Jungha Wang, Youngjun Hwang, David Hyunchul Shim</div>
+            <div class="paper-authors">Juno Kim, Hye-Jung Yoon, Yesol Park, Byoung-Tak Zhang</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">机器人视觉中<strong class="kw">语义分割</strong>与<strong class="kw">深度估计</strong>的多任务密集预测</span>
+                    <span class="summary-text">机器人场景中的<strong class="kw">类别无关3D实例分割</strong></span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有 DPT 解码策略开销大，冻结<strong class="kw">视觉基础模型</strong>利用率低</span>
+                    <span class="summary-text">逐帧2D掩码投影融合易致物体身份断裂、实例碎片化</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出 <strong class="kw">DPNeXt</strong> 轻量解码器，结合双分支反瓶颈结构与边界引导策略提升效率</span>
+                    <span class="summary-text">跨帧<strong class="kw">2D掩码跟踪</strong>并与3D超点关联,构建2D-3D反馈闭环零样本生成一致3D实例</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.16012" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17778" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15898" target="_blank">Orbis 2: A Hierarchical World Model for Driving</a>
+                <a href="https://arxiv.org/abs/2607.17769" target="_blank">From Sign Language Generation to Humanoid Execution: Vision-Language Guided Retargeting with Collision Mitigation</a>
             </h2>
-            <div class="paper-authors">Sudhanshu Mittal, Arian Mousakhan, Silvio Galesso, Karim Farid, Jonannes Dienert, Rajat Sahay, Thomas Brox</div>
+            <div class="paper-authors">Nabeela Khan, Bowen Wu, Runwu Shi, Benjamin Yen, Takeshi Ashizawa, Carlos Toshinori Ishi, Takashi Minato, Kazuhiro Nakadai</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">构建自动驾驶场景的<strong class="kw">分层世界模型</strong>做未来预测</span>
+                    <span class="summary-text">将<strong class="kw">手语生成</strong>的3D人体动作迁移到人形机器人执行</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有世界模型单一尺度，缺乏空间推理与语义理解</span>
+                    <span class="summary-text">生成动作存在自碰撞,导致IK无解、碰撞及轨迹不稳定</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">高层预测粗略场景结构，低层用<strong class="kw">扩散强制</strong>预训练、<strong class="kw">教师强制</strong>微调生成细节</span>
+                    <span class="summary-text">提出<strong class="kw">SMPL-X碰撞消除</strong>模块与<strong class="kw">VLM引导</strong>重定向算法修正失败模式</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15898" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17769" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15890" target="_blank">Exo2EgoPose: Leveraging Exocentric Demonstrations for Vision-Language guided Egocentric 3D Hand Pose Forecasting</a>
+                <a href="https://arxiv.org/abs/2607.17760" target="_blank">Generalize and Guide: Decomposing Rewards for Few-Shot Inverse Reinforcement Learning</a>
             </h2>
-            <div class="paper-authors">Zhaofeng Shi, Heqian Qiu, Lanxiao Wang, Xiang Li, Hongliang Li</div>
+            <div class="paper-authors">Ziyi Liu, Grace Zhang</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">语言指令引导下预测第一人称 <strong class="kw">3D 手部姿态</strong></span>
+                    <span class="summary-text">小样本示范下的<strong class="kw">逆强化学习</strong>新任务泛化</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">第一人称视野受限、动作剧烈，机器人数据又不足</span>
+                    <span class="summary-text">真实任务变化多样,难以为每种场景收集完整示范</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">借助<strong class="kw">第三人称示范视频</strong>重建时空表征，逐层调制第一人称特征来指导预测</span>
+                    <span class="summary-text">提出<strong class="kw">MPG方法</strong>,分解可迁移判别器与邻近引导奖励,复用多任务示范</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15890" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17760" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15868" target="_blank">EgoExoMoCap: Distributed Ego-Exo Human Motion Capture</a>
+                <a href="https://arxiv.org/abs/2607.17757" target="_blank">Seg2Grasp: A Robust Modular Suction Grasping in Bin Picking</a>
             </h2>
-            <div class="paper-authors">Jiaxi Jiang, Bharat Lal Bhatnagar, Nan Yang, Lingni Ma, Sebastian Starke, Robin Kips, Nadine Bertsch, Christian Holz, Federica Bogo</div>
+            <div class="paper-authors">Hye-Jung Yoon, Juno Kim, Yesol Park, Jun-Ki Lee, Byoung-Tak Zhang</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">从头戴设备联合估计自身与周围人体动作</span>
+                    <span class="summary-text">杂乱料箱中的<strong class="kw">吸盘抓取</strong>机器人拣选</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有方法割裂自我与他人追踪,难以鲁棒重建</span>
+                    <span class="summary-text">端到端学习方法对未知复杂物体易失效</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">多副<strong class="kw">智能眼镜</strong>分布式协作,融合头部信号与 <strong class="kw">DINOv3</strong> 特征鲁棒估计全局动作</span>
+                    <span class="summary-text">模块化流程:<strong class="kw">Transformer分割</strong>掩码、法向量定抓取点、开放词汇分类识别物体</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15868" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17757" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15849" target="_blank">Test-Time Noise Guided Adaptation for Realistic Autoregressive Video Generation</a>
+                <a href="https://arxiv.org/abs/2607.17754" target="_blank">DA-Fusion: Deformable Attention-Based RGB-D Fusion Transformer for Unseen Object Instance Segmentation</a>
             </h2>
-            <div class="paper-authors">Dimitrios Karageorgiou, Symeon Papadopoulos, Ioannis Kompatsiaris, Efstratios Gavves</div>
+            <div class="paper-authors">Yesol Park, Hye-Jung Yoon, Juno Kim, Byoung-Tak Zhang</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">自回归视频扩散模型的长视频生成</span>
+                    <span class="summary-text">物流拣选场景中<strong class="kw">未知物体实例分割</strong></span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">误差累积导致生成轨迹跑偏,陷入生成终止点</span>
+                    <span class="summary-text">纯RGB易过分割、纯深度易欠分割,难应对遮挡堆叠</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用<strong class="kw">扩散模型自评</strong>预测噪声偏差,<strong class="kw">测试时优化</strong>避开终止轨迹</span>
+                    <span class="summary-text">提出<strong class="kw">可变形注意力RGB-D融合</strong>Transformer,并发布拣选数据集OCBD</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15849" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17754" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15828" target="_blank">Beyond Frontiers: Scene-Anomaly Guided Autonomous Exploration</a>
+                <a href="https://arxiv.org/abs/2607.17639" target="_blank">Direct Clinical Joint Angle Extraction from Parametric Body Model Rotation Matrices</a>
             </h2>
-            <div class="paper-authors">Akash Kumbar, Abhinav Raundhal, Madhava Krishna</div>
+            <div class="paper-authors">Joey Páolo Kardolus, Daan Hendriks, Jaap Jansen</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">机器人自主探索未知 3D 环境以完成场景重建</span>
+                    <span class="summary-text">从<strong class="kw">参数化人体模型</strong>旋转矩阵直接提取临床关节角度</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">传统覆盖率驱动探索忽略结构语义,重建质量差</span>
+                    <span class="summary-text">传统关节角度测量工具慢、贵，且局限于实验室环境</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<strong class="kw">场景异常检测</strong>引导探索,先验室内结构主动修正<strong class="kw">点云重建</strong>薄弱区域</span>
+                    <span class="summary-text">跳过<strong class="kw">逆运动学</strong>优化，用小型校准表把模型旋转矩阵映射为临床角度，单摄像头视频实时可用</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15828" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17639" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15778" target="_blank">Modularized Dynamic-Granularity Video LLM for Multi-Event Long Video Understanding</a>
+                <a href="https://arxiv.org/abs/2607.17599" target="_blank">ConsiSpace: Learning Geometric Consistency Matters for Video Spatial Reasoning</a>
             </h2>
-            <div class="paper-authors">Wei Feng, Xin Wang, Yu-Wei Zhan, Yuwei Zhou, Wenwu Zhu</div>
+            <div class="paper-authors">Ting Huang, Zhenyu Zhang, Wenyuan Huang, Jian Yang, Hao Tang</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">长视频多事件理解中的 Video LLM 推理</span>
+                    <span class="summary-text">视频中的 3D 场景空间关系推理任务</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">视觉 token 预算有限,难以兼顾多个关键事件细节</span>
+                    <span class="summary-text">MLLM 难以从冗余视频观测中稳定聚合空间证据</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text"><strong class="kw">动态粒度</strong>模块自反思定位相关片段,细粒度编码正片段粗粒度编码负片段</span>
+                    <span class="summary-text">构建<strong class="kw">几何一致性记忆</strong>存储证据，用<strong class="kw">一致性强化学习</strong>提升跨视角稳定性</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15778" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17599" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15772" target="_blank">SlotMem: Character-Addressable Internal Memory for Narrative Long Video Generation</a>
+                <a href="https://arxiv.org/abs/2607.17574" target="_blank">Predictive Training with Latent Imagination for Visual Quadruped Navigation</a>
             </h2>
-            <div class="paper-authors">Yilai Liu, Xin Zhang, Shiyuan Zhang, Hongyang Du</div>
+            <div class="paper-authors">Yancheng Zhu, Wanli Ma, Chen Han, Irvin Haozhe Zhan, Bingfeng Qin, Yixin Xu</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">叙事性长视频生成中的多角色身份一致性维持</span>
+                    <span class="summary-text">四足机器人在动态环境中的视觉导航避障</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有记忆检索与角色身份不对齐，缺少持续更新机制</span>
+                    <span class="summary-text">现有策略仅凭当前观测，难以预判障碍物短期运动趋势</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<strong class="kw">角色可寻址内存</strong>，将角色相关 token 压缩为槽位记忆，按角色定向注入注意力</span>
+                    <span class="summary-text">训练时用<strong class="kw">JEPA 式预测器</strong>预测未来隐状态，推理时零成本丢弃，实现零样本 <strong class="kw">sim-to-real</strong> 迁移</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15772" class="link-btn" target="_blank">alphaXiv</a>
-                <a href="https://github.com/YilaiLiu-HKU/SlotMem" class="link-btn project" target="_blank">Project Page</a>
+                <a href="https://alphaxiv.org/abs/2607.17574" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15732" target="_blank">IoUPD: IoU-Aware Privileged Distillation for Visual Grounding with Multimodal Large Language Models</a>
+                <a href="https://arxiv.org/abs/2607.17560" target="_blank">Reinforcement Learning: From Algorithms To Foundation Models</a>
             </h2>
-            <div class="paper-authors">Xiuyuan Zhu, Ke Lu, Hao Wu, Zijin Du, Dongming Zhang, Jian Xue</div>
+            <div class="paper-authors">Zihan Ding</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">坐标生成式 MLLM 视觉定位任务</span>
+                    <span class="summary-text">博士论文：研究博弈强化学习与基础模型时代的决策方法</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">训练用 token 似然与评测用 IoU 重叠度不匹配</span>
+                    <span class="summary-text">预训练生成模型能为序列决策提供更强的结构化先验</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">引入<strong class="kw">特权蒸馏</strong>，让教师模型见框标注图像指导学生，推理时无需框输入</span>
+                    <span class="summary-text">构建<strong class="kw">扩散式世界模型</strong>，研究视频生成与<strong class="kw">交互式世界模型</strong>中动作如何影响未来观测</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15732" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17560" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15727" target="_blank">Event3R: Asynchronous-to-Global 3D Reconstruction from Event Camera via Spatial-Temporal Feature Aggregation</a>
+                <a href="https://arxiv.org/abs/2607.17523" target="_blank">Thinking in Video: Can Video Generators Really Reason About the Real World?</a>
             </h2>
-            <div class="paper-authors">Jian Huang, Haotian Shen, Xinhao Lou, Chengrui Dong, Wenpu Li, Peidong Liu</div>
+            <div class="paper-authors">Yongheng Zhang, Guang Yang, Ruihan Hou, Qiguang Chen, Ziang Liu, Xiaolong Liu, Manman Zhang, Yanchao Hao, Zheng Wei, Hao Wu, Libo Qin, Peishan Dai, Yinghui Li, Di Yin, Xing Sun</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">用<strong class="kw">事件相机</strong>流做前馈式全局一致 3D 重建</span>
+                    <span class="summary-text">评估<strong class="kw">视频生成模型</strong>能否真正对真实世界做因果推理</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">事件数据异步稀疏动态性强，缺乏大规模标注数据</span>
+                    <span class="summary-text">现有指标割裂了画面真实感与语义因果逻辑的评测</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用<strong class="kw">时空体素</strong>编码事件并结合时序注意力，<strong class="kw">掩码建模</strong>自监督预训练强化时序特征</span>
+                    <span class="summary-text">提出双重评测框架 <strong class="kw">CGDJ</strong>，分别检验显式因果感知与隐式生成-预测差距，审查<strong class="kw">世界模型一致性</strong></span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15727" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17523" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15717" target="_blank">Per-Stroke Temporal Control for Text-to-Motion via Action Units and Action-Detection Guidance</a>
+                <a href="https://arxiv.org/abs/2607.17342" target="_blank">STAR: Skeletal Token Alignment and Rearrangement for Interaction Recognition</a>
             </h2>
-            <div class="paper-authors">Euijun Jung, Youngki Lee</div>
+            <div class="paper-authors">Yuhang Wen, Mengyuan Liu, Zixuan Tang, Junsong Yuan, Sirui Li, Beichen Ding</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">文本生成动作中每次击打的精细时序控制</span>
+                    <span class="summary-text">基于骨骼序列识别人机/人人交互动作</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有模型难以生成可分离、正确排序的连续动作</span>
+                    <span class="summary-text">骨骼数据缺乏视觉细节，难以捕捉交互线索</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<strong class="kw">动作单元</strong>显式建模部位与时间窗口，结合适配器与检测器梯度实现精准控制</span>
+                    <span class="summary-text">用<strong class="kw">对比学习</strong>对齐骨骼与 RGB 视频特征，推理时仅需骨骼即可保留视觉增强效果</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15717" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17342" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15689" target="_blank">Efficient Frame Selection for Long Videos at Test Time with Attention-Based MLLM Selectors</a>
+                <a href="https://arxiv.org/abs/2607.17323" target="_blank">From Perception to Assistance: Open-Vocabulary Shared Autonomy for Robotic Manipulation</a>
             </h2>
-            <div class="paper-authors">Yilin Wang, Xiangxi Zheng, Dongxing Mao, Linjie Li, Zhengyuan Yang, Ping Yu, Rui Yan, Yuan Yao, Alex Jinpeng Wang</div>
+            <div class="paper-authors">Murilo Vinicius da Silva, Ricardo V. Godoy, Juliano Negri, Gustavo J. G. Lahr, Ranulfo Bezerra, Marcelo Becker</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">长视频理解中的关键帧高效选择</span>
+                    <span class="summary-text">遥操作机械臂抓取时提供<strong class="kw">共享自主</strong>辅助</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">选帧需先理解视频内容，构成循环依赖难题</span>
+                    <span class="summary-text">纯视觉遥操作难以精确对准目标且易碰撞</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用 <strong class="kw">MLLM</strong> 跨模态注意力免生成评估帧相关性，动态规划分配帧数与 token 预算</span>
+                    <span class="summary-text">用<strong class="kw">视觉语言模型</strong>定位开放词汇目标，MPC 控制器实时避障并辅助抓取</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15689" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17323" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15667" target="_blank">PE-Field 4D: Video Generation Models as Canvas</a>
+                <a href="https://arxiv.org/abs/2607.17257" target="_blank">Asynchronous Multimodal Diffusion Policy Composition via Latency-Aware Guidance Fusion</a>
             </h2>
-            <div class="paper-authors">Yunpeng Bai, Haoxiang Li, Qixing Huang</div>
+            <div class="paper-authors">Zihao He, Hongjie Fang, Shirun Tang, Cewu Lu, Haoshu Fang</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">视频扩散模型中的几何感知视角控制生成</span>
+                    <span class="summary-text">机器人操作中融合多模态<strong class="kw">扩散策略</strong>的动作生成</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">视角变化和相机运动下场景几何难以精确控制</span>
+                    <span class="summary-text">各模态传感频率、延迟不同，同步融合拖慢高频反馈</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<strong class="kw">几何感知交叉注意力</strong>，用投影位置编码让生成 token 对齐参考视角内容</span>
+                    <span class="summary-text">提出 <strong class="kw">LAG-Fusion</strong> 框架，各模态按自身频率异步提供去噪引导，通过参考系重定基准对齐延迟后融合</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15667" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17257" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15641" target="_blank">IMBench: A Benchmark for Intuitive Robotic Manipulation</a>
+                <a href="https://arxiv.org/abs/2607.17097" target="_blank">HarmoHOI: Harmonizing Appearance and 3D Motion for Multi-view Hand-Object Interaction Synthesis</a>
             </h2>
-            <div class="paper-authors">Anurag Maurya, Sukhvansh Jain, Prajwal Avhad, Gautham Balachandran, Ziyi Zhou, Atharva Kshirsagar, Satyam Singh, Bowen Li. Rishabh Mukund, Ritul Singh, Jatin Vira, Suvonil Chatterjee, Devesh K. Jha</div>
+            <div class="paper-authors">Lingwei Dang, Juntong Li, Zonghan Li, Hongwen Zhang, Liang An, Wei Min, Yebin Liu, Qingyao Wu</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">提出评测<strong class="kw">直觉物理操作</strong>能力的机器人操作基准</span>
+                    <span class="summary-text">多视角<strong class="kw">手物交互</strong>视频与3D运动的联合生成</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有基准割裂物理推理与执行，难以评估综合操作能力</span>
+                    <span class="summary-text">复杂手部运动和遮挡导致多视角一致性难以保证</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">构建35个任务、1.4万条轨迹，测试<strong class="kw">VLM</strong>与<strong class="kw">VLA</strong>模型的感知-推理-执行全流程</span>
+                    <span class="summary-text">用统一<strong class="kw">扩散模型</strong>联合建模RGB视频与3D点轨迹，用伪视频对齐几何与2D潜空间</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15641" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.17097" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15621" target="_blank">Think at 5 Hz, Act at 20 Hz: Asynchronous Fast-Slow Vision-Language-Action Inference for Closed-Loop Driving</a>
+                <a href="https://arxiv.org/abs/2607.16921" target="_blank">PREFAIL: Identifying Precursors to Failures in Robotic Lift-and-Place Tasks to Improve Task Execution Performance</a>
             </h2>
-            <div class="paper-authors">Yun Li, Jiachen Gong, Simon Thompson, Ehsan Javanmardi, Qunli Zhang, Zifan Zeng, Shiming Liu, Peng Wang, Zixuan Guo, Manabu Tsukada</div>
+            <div class="paper-authors">Zeyu Shangguan, Rajas Chitale, Rutvik Patel, Satyandra K. Gupta, Daniel Seita</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">面向自动驾驶的<strong class="kw">视觉-语言-动作</strong>闭环控制</span>
+                    <span class="summary-text">预测机器人<strong class="kw">搬运任务</strong>中的失败先兆</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">大模型推理延迟跟不上车辆控制所需的高频率</span>
+                    <span class="summary-text">现有方法对动态动作敏感、依赖已知策略结构</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">采用<strong class="kw">快慢双系统架构</strong>，慢速VLM提取场景KV缓存，快速动作专家高频回归轨迹</span>
+                    <span class="summary-text">分析物体相对<strong class="kw">载具的运动</strong>，提出<strong class="kw">PREFAIL</strong>方法并标注可干预时间数据集</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15621" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.16921" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15400" target="_blank">Unsupervised Keypoints for Real-Time Fall Detection: Comparative Analysis Under Real-world Conditions with Predictive Bandwidth Reduction</a>
+                <a href="https://arxiv.org/abs/2607.16805" target="_blank">Scene-SAM3D: Multi-View Scene Asset Generation Without Fine-Tuning</a>
             </h2>
-            <div class="paper-authors">Tasmiah Haque, Jacob Kosinski, Sumit Mohan, Srinjoy Das, Mohammad Abdullah Al-Mamun</div>
+            <div class="paper-authors">Yuqi Zhang, Yadan Luo, Xiangyu Sun, Fengyi Zhang, Zi Huang, Xin Tan</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">基于<strong class="kw">无监督关键点</strong>的实时隐私保护跌倒检测</span>
+                    <span class="summary-text">从多视角图像生成具身场景的 3D 资产</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">监督式姿态估计遮挡下失效，RGB传输又侵犯隐私</span>
+                    <span class="summary-text">真实场景遮挡多、视角不一致，单图 3D 生成难泛化</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用<strong class="kw">无监督关键点</strong>替代RGB传输，结合时序预测判断跌倒，遮挡场景下更鲁棒</span>
+                    <span class="summary-text">免训练框架，用<strong class="kw">关键视角选择</strong>和<strong class="kw">隐空间速度融合</strong>整合多视角证据并优化场景布局</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15400" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.16805" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://github.com/xibi777/Scene-SAM3D" class="link-btn project" target="_blank">Project Page</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15374" target="_blank">Reasoning-Guided Part-Level Visual Grounding via Reinforcement Learning</a>
+                <a href="https://arxiv.org/abs/2607.16602" target="_blank">PAVXploreRL: Physical-Action-Visual World Model Reinforcement Learning with Action Exploration</a>
             </h2>
-            <div class="paper-authors">Kazi Sajeed Mehrab, Hani Alomari, Najibul Haque Sarker, Chia-Wei Tang, Zaber Ibn Abdul Hakim, Anuj Karpatne, Chris Thomas</div>
+            <div class="paper-authors">Han Wang, Zijun Wang, Shuoshuo Xue, Rui Cao, Fenjiao Cheng, Xiaodang Liang, Roy Ka-Wei Lee</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">让MLLM根据语言指令定位物体的具体部件</span>
+                    <span class="summary-text">用<strong class="kw">强化学习</strong>优化动作条件<strong class="kw">世界模型</strong>的物理与视觉保真度</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有模型缺失物体-部件层级，部件定位效果差</span>
+                    <span class="summary-text">现有世界模型只靠像素重建损失，难以显式优化物理合理性且泛化差</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<strong class="kw">由粗到细</strong>先定位物体再定位部件的推理框架，用<strong class="kw">part-aware GRPO</strong>强化学习分阶段训练并自我反思校正</span>
+                    <span class="summary-text">结合 ID 轨迹与噪声驱动的 <strong class="kw">OOD 动作探索</strong>，通过奖励机制显式优化 PAV 目标</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15374" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.16602" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://github.com/Social-AI-Studio/PAVXploreRL" class="link-btn project" target="_blank">Project Page</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15331" target="_blank">Training-Free Open-Vocabulary 3D Point-Cloud Segmentation on the Generalized Few-Shot Benchmark</a>
+                <a href="https://arxiv.org/abs/2607.16591" target="_blank">Learning from World Feedback: Why Model Uncertainty Fails as a Risk Signal in Model-Based RL</a>
             </h2>
-            <div class="paper-authors">Silas kwabla Gah, Ebenezer Owusu</div>
+            <div class="paper-authors">Zhaohui Wang</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">无需训练的开放词汇<strong class="kw">3D点云分割</strong>（少样本场景）</span>
+                    <span class="summary-text">研究基于模型的强化学习中风险信号是否可靠</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有方法虽准确，但依赖3D标注、逐场景训练与支持样本，代价高</span>
+                    <span class="summary-text"><strong class="kw">世界模型</strong>不确定性代理与真实碰撞风险负相关，标准安全机制反而失效</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">结合<strong class="kw">冻结3D视觉语言模型</strong>与<strong class="kw">SAM3</strong>，通过跨视图一致性投票判定新类，全程无需训练</span>
+                    <span class="summary-text">改用<strong class="kw">世界反馈信号</strong>（雷达余量、碰撞时间、结果监督模型）替代模型内部不确定性</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15331" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.16591" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
         <div class="paper-card">
             <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.15330" target="_blank">Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories</a>
+                <a href="https://arxiv.org/abs/2607.16401" target="_blank">Apple-$π$: Benchmarking Thinking with Video Towards Law-Grounded Physical Intelligence</a>
             </h2>
-            <div class="paper-authors">Xiaomi Robotics Team, Jun Guo, Piaopiao Jin, Jason Li, Peiyan Li, Yingyan Li, Futeng Liu, Wanli Peng, Optimus Qin, Yifei Su, Nan Sun, Qiao Sun, Runze Suo, Heyun Wang, Yunhong Wang, Rujie Wu, Caoyu Xia, Lina Zhang, Jack Zhao, Guoliang Chen, Wenlong Chen, Xinze He, Bin Li, Qing Li, Zhuorong Li, Heng Qu, Wenxuan Song, Diyun Xiang, Yifan Xie, Peiran Xu, Hangjun Ye, Wen Ye, Han Zhao, Quanyun Zhou</div>
+            <div class="paper-authors">Runmao Yao, Kairui Hu, Yukang Cao, Ruisi Wang, Shulin Tian, Ziang Cao, Weichen Fan, Ziqi Huang, Yuhao Dong, Hao Li, Zhaoxi Chen, Zhongang Cai, Lei Yang, Ziwei Liu</div>
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">训练可泛化的移动操作<strong class="kw">VLA</strong>基础模型</span>
+                    <span class="summary-text">评测视频生成模型作为<strong class="kw">物理世界模型</strong>的推理能力</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">让机器人无需微调即可泛化新环境，且能高效适配新任务</span>
+                    <span class="summary-text">现有基准仅看结果合理性，未验证是否按物理定律推理</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">基于超<strong class="kw">10万小时</strong>真实轨迹两阶段训练，自动标注场景转移文本作为动作条件</span>
+                    <span class="summary-text">提出 Apple-π 基准和<strong class="kw">感知-建模-推演</strong>三阶段协议，结合经典力学视频集评测</span>
                 </div>
             </div>
             
             <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.15330" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://alphaxiv.org/abs/2607.16401" class="link-btn" target="_blank">alphaXiv</a>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <h2 class="paper-title">
+                <a href="https://arxiv.org/abs/2607.16314" target="_blank">Depth-Regularized JEPA World Models Learn More Transferable Representations from Real Outdoor Robot Data</a>
+            </h2>
+            <div class="paper-authors">Usman M. Khan</div>
+            <div class="paper-summary">
+                <div class="summary-row">
+                    <span class="summary-label">任务设定</span>
+                    <span class="summary-text">从真实户外机器人视频学习可迁移的<strong class="kw">世界模型</strong>表征</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">痛点动机</span>
+                    <span class="summary-text">复杂<strong class="kw">户外场景</strong>视觉多变，JEPA 学习鲁棒动态表征困难</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">解决方案</span>
+                    <span class="summary-text">引入<strong class="kw">深度先验</strong>监督结合<strong class="kw">各向同性正则化</strong>，学习更鲁棒的潜在动态</span>
+                </div>
+            </div>
+            
+            <div class="paper-links">
+                <a href="https://alphaxiv.org/abs/2607.16314" class="link-btn" target="_blank">alphaXiv</a>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <h2 class="paper-title">
+                <a href="https://arxiv.org/abs/2607.16312" target="_blank">xperception -- Making Robotic Grasping Easier</a>
+            </h2>
+            <div class="paper-authors">Matteo Bortolon, Andrea Caraffa, Alice Fasoli, Fabio Poiesi</div>
+            <div class="paper-summary">
+                <div class="summary-row">
+                    <span class="summary-label">任务设定</span>
+                    <span class="summary-text">面向工业场景的<strong class="kw">零样本 6D 位姿估计</strong>与抓取</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">痛点动机</span>
+                    <span class="summary-text">新品上线常需重新采集数据训练，视觉系统缺乏灵活性</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">解决方案</span>
+                    <span class="summary-text">结合 CAD 模型与<strong class="kw">DINOv2、GeDi 等基础模型</strong>特征，免微调实现<strong class="kw">毫米级抗遮挡位姿估计</strong></span>
+                </div>
+            </div>
+            
+            <div class="paper-links">
+                <a href="https://alphaxiv.org/abs/2607.16312" class="link-btn" target="_blank">alphaXiv</a>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <h2 class="paper-title">
+                <a href="https://arxiv.org/abs/2607.16309" target="_blank">SaaF: Scene-Specific Ambiguity-Aware 3D Language Fields towards Interactive Real-World Object Retrieval</a>
+            </h2>
+            <div class="paper-authors">Yuga Yano, Daiju Kanaoka, Hakaru Tamukoh, Yasutomo Kawanishi</div>
+            <div class="paper-summary">
+                <div class="summary-row">
+                    <span class="summary-label">任务设定</span>
+                    <span class="summary-text">面向服务机器人的<strong class="kw">3D 语言场</strong>交互式物体检索</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">痛点动机</span>
+                    <span class="summary-text">特征压缩致相似物体难辨，且难以处理<strong class="kw">模糊查询</strong></span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">解决方案</span>
+                    <span class="summary-text">用<strong class="kw">度量学习</strong>构建判别且感知歧义的统一特征空间，模糊时主动请求澄清</span>
+                </div>
+            </div>
+            
+            <div class="paper-links">
+                <a href="https://alphaxiv.org/abs/2607.16309" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
