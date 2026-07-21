@@ -116,6 +116,7 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Paper Feed — {today_str}</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <style>
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
         body {{
@@ -314,6 +315,7 @@ def generate_archive_index(archives: list[str]) -> str:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Paper Feed — 历史存档</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <style>
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
         body {{
@@ -413,6 +415,11 @@ def main():
     archive_html = archive_html.replace(
         '<a href="archive/">历史存档</a>',
         '<a href="index.html">全部存档</a>'
+    )
+    # Fix archive page favicon path
+    archive_html = archive_html.replace(
+        'href="favicon.svg"',
+        'href="../favicon.svg"'
     )
     with open(archive_path, "w", encoding="utf-8") as f:
         f.write(archive_html)

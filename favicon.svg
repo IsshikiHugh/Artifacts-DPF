@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .paper { fill: #e8f0e4; stroke: #81a264; stroke-width: 2; stroke-linejoin: round; }
+      .fold  { fill: #c5d9bc; stroke: #81a264; stroke-width: 2; stroke-linejoin: round; }
+      .line  { stroke: #81a264; stroke-width: 2; stroke-linecap: round; }
+    </style>
+  </defs>
+  <!-- Paper body (pentagon with top-right corner cut off) -->
+  <path class="paper" d="M5,4 L5,28 L27,28 L27,11 L21,4 Z"/>
+  <!-- Folded corner triangle -->
+  <polygon class="fold" points="21,4 21,11 27,11"/>
+  <!-- Fold crease lines -->
+  <line class="line" x1="21" y1="4" x2="21" y2="11"/>
+  <line class="line" x1="21" y1="11" x2="27" y2="11"/>
+  <!-- Text lines -->
+  <line class="line" x1="9" y1="14" x2="20" y2="14"/>
+  <line class="line" x1="9" y1="19" x2="23" y2="19"/>
+</svg>
