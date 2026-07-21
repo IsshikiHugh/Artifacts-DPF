@@ -32,7 +32,7 @@ LINK_COLOR = "#81a263"
 LINK_HOVER = "#538392"
 SHADOW_COLOR = "#f8f3ef"
 SHADOW_HOVER = "#eee7e1"
-FONT_FAMILY = "optima, Philosopher, Helvetica, Arial, Verdana, sans-serif"
+FONT_FAMILY = "optima, Philosopher, Helvetica, Arial, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif"
 
 
 def get_today_str() -> str:
@@ -123,6 +123,7 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
             font-family: {FONT_FAMILY};
             line-height: 1.6;
             min-height: 100vh;
+            letter-spacing: 0.02em;
         }}
         ::selection {{
             background: {BORDER_COLOR};
@@ -319,6 +320,7 @@ def generate_archive_index(archives: list[str]) -> str:
             font-family: {FONT_FAMILY};
             line-height: 1.6;
             min-height: 100vh;
+            letter-spacing: 0.02em;
         }}
         ::selection {{
             background: {BORDER_COLOR};
