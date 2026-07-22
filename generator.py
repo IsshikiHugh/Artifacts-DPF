@@ -265,7 +265,7 @@ def generate_html(today_str: str, today_display: str, papers: list[dict]) -> str
             border-color: {LINK_COLOR};
         }}
         .link-btn.project {{
-            color: {MUTED_COLOR};
+            color: {LINK_COLOR};
             border-color: {BORDER_COLOR};
         }}
         .link-btn.project:hover {{
