@@ -175,7 +175,7 @@
         <header>
             <h1>Daily Paper Feed</h1>
             <div class="subtitle">
-                2026 年 07 月 22 日 星期三 · 共 31 篇相关论文 ·
+                2026 年 07 月 22 日 星期三 · 共 29 篇相关论文 ·
                 <a href="archive/">历史存档</a>
             </div>
         </header>
@@ -189,15 +189,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">视觉导航中为<strong class="kw">扩散规划</strong>轨迹自适应选安全边界</span>
+                    <span class="summary-text">机器人视觉导航中自适应安全边界的选择</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">固定安全边界会导致绕路超时或冒险抄近道</span>
+                    <span class="summary-text">固定安全边界导致绕路或贴近障碍冒进</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用<strong class="kw">情境安全评价器</strong>给候选轨迹打分排序，蒸馏为纯感知选择器，可迁移到 Unitree G1 人形机器人</span>
+                    <span class="summary-text">用<strong class="kw">扩散规划器</strong>生成轨迹候选，训练<strong class="kw">安全评论家</strong>筛选排序，蒸馏为纯感知选择器并部署到 Unitree G1 人形机器人</span>
                 </div>
             </div>
             
@@ -214,20 +214,21 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">统一多种仿真器评测<strong class="kw">具身任务规划</strong></span>
+                    <span class="summary-text">统一多模拟器的<strong class="kw">具身任务规划</strong>基准</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">各仿真器观测/动作格式不同,难以统一训练评估</span>
+                    <span class="summary-text">各模拟器观测/动作格式不一，难以统一评测和扩展训练数据</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出 <strong class="kw">UniETP</strong> 统一接口整合 AI2-THOR 等 4 个仿真器,标准化观测动作空间并自动生成多样任务数据</span>
+                    <span class="summary-text">整合四大模拟器为统一<strong class="kw">观测-动作空间</strong>，自动构建多难度任务数据集</span>
                 </div>
             </div>
             
             <div class="paper-links">
                 <a href="https://alphaxiv.org/abs/2607.18062" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://github.com/woyut/UniETP" class="link-btn project" target="_blank">Project Page</a>
             </div>
         </div>
 
@@ -239,15 +240,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text"><strong class="kw">视觉语言导航</strong>中利用未来观测辅助决策</span>
+                    <span class="summary-text">视觉-语言导航中让策略提前预判<strong class="kw">未来观测</strong></span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">传统模仿学习只监督下一步动作,忽略未来视觉预测</span>
+                    <span class="summary-text">传统行为克隆只监督下一步动作，未显式利用未来视觉信息</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出 <strong class="kw">FSC-VLN</strong>,训练时用未来视觉隐向量监督当前状态,推理时无需真实未来图像</span>
+                    <span class="summary-text">引入<strong class="kw">未来查询 token</strong> ，训练时对齐未来帧潜特征，推理时无需未来图像即可提升导航效果</span>
                 </div>
             </div>
             
@@ -264,15 +265,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text"><strong class="kw">世界模型</strong>长时程规划中的候选动作生成问题</span>
+                    <span class="summary-text"><strong class="kw">潜在世界模型</strong>长时程规划中的候选动作生成</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">规划步长增加时,固定候选预算难以覆盖指数级动作空间</span>
+                    <span class="summary-text">规划步长变长后固定候选预算难以搜索指数级增长的动作空间</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<strong class="kw">子目标条件化</strong>动作生成器,先预测潜在子目标再据此生成候选动作序列,由世界模型评估筛选</span>
+                    <span class="summary-text">用<strong class="kw">目标条件生成器</strong>预测未来潜在子目标以引导候选动作生成，再由世界模型评估筛选</span>
                 </div>
             </div>
             
@@ -289,15 +290,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text"><strong class="kw">单目几何估计</strong>中细节结构(如细长物体)失真问题</span>
+                    <span class="summary-text">单目图像<strong class="kw">细粒度 3D 几何</strong>估计，还原细小结构</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">2D 参数化解码导致深度不连续处特征混合,细节过平滑</span>
+                    <span class="summary-text">现有方法在 2D 图像平面解码几何，导致细长结构过度平滑失真</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<strong class="kw">稀疏体素细化(SSR)</strong>,将粗点图提升到 3D 稀疏体素壳上按空间邻近性精细化</span>
+                    <span class="summary-text">将粗略点云提升到<strong class="kw">稀疏体素</strong>空间，用稀疏卷积在真实 3D 空间中精细化几何</span>
                 </div>
             </div>
             
@@ -314,15 +315,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">长时程<strong class="kw">机器人操作</strong>中的高层技能选择决策</span>
+                    <span class="summary-text">长时序机器人<strong class="kw">操作</strong>任务中技能选择过程不透明</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有方法把技能选择当<strong class="kw">黑盒映射</strong>，难以监督和干预</span>
+                    <span class="summary-text">现有方法把技能选择当黑箱映射，难以人工监督和干预</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">构建可解释的<strong class="kw">概念空间</strong>，用决策树预测技能，支持逐概念人工修正</span>
+                    <span class="summary-text">提出 <strong class="kw">ConceptTree</strong> ，用可解释概念谓词序列表示策略，训练<strong class="kw">决策树</strong>预测高层技能</span>
                 </div>
             </div>
             
@@ -339,15 +340,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">让具身智能体依据语言指令预测导航动作</span>
+                    <span class="summary-text">基于 Pangu 大模型的视觉语言导航动作预测</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">视觉语言对齐、动作空间适配与训练稳定性难以兼顾</span>
+                    <span class="summary-text">适配大模型需视觉对齐、时序压缩与动作空间对齐</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">两阶段训练： <strong class="kw">Q-Former</strong> 做视觉语言对齐，再用 <strong class="kw">LoRA</strong> 微调专家导航轨迹</span>
+                    <span class="summary-text">两阶段训练： <strong class="kw">Q-Former</strong> 对齐视觉语言，再用 <strong class="kw">LoRA</strong> 微调导航轨迹动作预测</span>
                 </div>
             </div>
             
@@ -364,15 +365,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">从单目第一人称视频重建 4D 人体与场景</span>
+                    <span class="summary-text">从单目第一人称视频联合重建<strong class="kw">人体与场景</strong> 4D 表征</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有方法依赖预计算轨迹，割裂建模人体与场景且推理慢</span>
+                    <span class="summary-text">现有方法依赖预计算相机轨迹，割裂场景与人体运动建模</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text"><strong class="kw">掩码生成式 Transformer</strong> 单前向统一建模 RGB、轨迹、姿态、手部与深度</span>
+                    <span class="summary-text">提出<strong class="kw">掩码生成式 Transformer</strong> 统一预测 RGB、轨迹、凝视、全身与手部动作及深度</span>
                 </div>
             </div>
             
@@ -389,45 +390,20 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">研究推理机制对 VLA 模型抗扰动鲁棒性的影响</span>
+                    <span class="summary-text">研究<strong class="kw">推理机制</strong>是否提升 VLA 模型抗扰动鲁棒性</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">直觉认为推理更鲁棒，但缺乏系统性验证与安全信号检验</span>
+                    <span class="summary-text">直觉认为先推理再行动应更鲁棒，但缺乏系统验证</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">对比<strong class="kw">无推理、文本 CoT、隐式迭代</strong>三类 VLA ，在视觉/推理/动作阶段施加扰动测试</span>
+                    <span class="summary-text">对比三种推理范式，发现<strong class="kw">隐式迭代推理</strong>模型鲁棒性最差，一致性探针难防御自适应攻击</span>
                 </div>
             </div>
             
             <div class="paper-links">
                 <a href="https://alphaxiv.org/abs/2607.17786" class="link-btn" target="_blank">alphaXiv</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.17778" target="_blank">CDIS: Cross-Dimensional Class-Agnostic 3D Instance Segmentation via 2D Mask Tracking and 3D-2D Projection Merging</a>
-            </h2>
-            <div class="paper-authors">Juno Kim, Hye-Jung Yoon, Yesol Park, Byoung-Tak Zhang</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">机器人场景中的<strong class="kw">类别无关 3D 实例分割</strong></span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">逐帧 2D 掩码投影融合易致物体身份断裂、实例碎片化</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">跨帧 <strong class="kw">2D 掩码跟踪</strong>并与 3D 超点关联,构建 2D-3D 反馈闭环零样本生成一致 3D 实例</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.17778" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
@@ -439,15 +415,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">将<strong class="kw">手语生成</strong>的 3D 人体动作迁移到人形机器人执行</span>
+                    <span class="summary-text">手语生成动作到<strong class="kw">人形机器人</strong>的重定向执行</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">生成动作存在自碰撞,导致 IK 无解、碰撞及轨迹不稳定</span>
+                    <span class="summary-text">生成动作自穿模，导致 <strong class="kw">IK 求解</strong>失败与碰撞</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出 <strong class="kw">SMPL-X 碰撞消除</strong>模块与 <strong class="kw">VLM 引导</strong>重定向算法修正失败模式</span>
+                    <span class="summary-text">用 <strong class="kw">SMPL-X 碰撞消除</strong>模块修正动作，再用 <strong class="kw">VLM 视觉评判</strong>引导重定向优化</span>
                 </div>
             </div>
             
@@ -464,70 +440,20 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">小样本示范下的<strong class="kw">逆强化学习</strong>新任务泛化</span>
+                    <span class="summary-text">少样本演示学习新的<strong class="kw">机器人操作/导航</strong>任务</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">真实任务变化多样,难以为每种场景收集完整示范</span>
+                    <span class="summary-text">真实任务变化多，<strong class="kw">少样本演示</strong>难覆盖全部场景</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出 <strong class="kw">MPG 方法</strong>,分解可迁移判别器与邻近引导奖励,复用多任务示范</span>
+                    <span class="summary-text">学习<strong class="kw">可迁移判别器</strong>奖励识别专家行为，用<strong class="kw">邻近度引导</strong>修正探索偏差</span>
                 </div>
             </div>
             
             <div class="paper-links">
                 <a href="https://alphaxiv.org/abs/2607.17760" class="link-btn" target="_blank">alphaXiv</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.17757" target="_blank">Seg2Grasp: A Robust Modular Suction Grasping in Bin Picking</a>
-            </h2>
-            <div class="paper-authors">Hye-Jung Yoon, Juno Kim, Yesol Park, Jun-Ki Lee, Byoung-Tak Zhang</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">杂乱料箱中的<strong class="kw">吸盘抓取</strong>机器人拣选</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">端到端学习方法对未知复杂物体易失效</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">模块化流程:<strong class="kw">Transformer 分割</strong>掩码、法向量定抓取点、开放词汇分类识别物体</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.17757" class="link-btn" target="_blank">alphaXiv</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.17754" target="_blank">DA-Fusion: Deformable Attention-Based RGB-D Fusion Transformer for Unseen Object Instance Segmentation</a>
-            </h2>
-            <div class="paper-authors">Yesol Park, Hye-Jung Yoon, Juno Kim, Byoung-Tak Zhang</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">物流拣选场景中<strong class="kw">未知物体实例分割</strong></span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">纯 RGB 易过分割、纯深度易欠分割,难应对遮挡堆叠</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出<strong class="kw">可变形注意力 RGB-D 融合</strong> Transformer,并发布拣选数据集 OCBD</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.17754" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
@@ -543,41 +469,16 @@
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">传统关节角度测量工具慢、贵，且局限于实验室环境</span>
+                    <span class="summary-text">传统关节角度测量依赖实验室设备,慢且昂贵,难以普及</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">跳过<strong class="kw">逆运动学</strong>优化，用小型校准表把模型旋转矩阵映射为临床角度，单摄像头视频实时可用</span>
+                    <span class="summary-text">用单部手机视频驱动 <strong class="kw">GEM-X</strong> 等人体模型,通过<strong class="kw">校准表</strong>免优化直接换算角度,精度媲美专业方案且可迁移到 SAM 3D Body</span>
                 </div>
             </div>
             
             <div class="paper-links">
                 <a href="https://alphaxiv.org/abs/2607.17639" class="link-btn" target="_blank">alphaXiv</a>
-            </div>
-        </div>
-
-        <div class="paper-card">
-            <h2 class="paper-title">
-                <a href="https://arxiv.org/abs/2607.17599" target="_blank">ConsiSpace: Learning Geometric Consistency Matters for Video Spatial Reasoning</a>
-            </h2>
-            <div class="paper-authors">Ting Huang, Zhenyu Zhang, Wenyuan Huang, Jian Yang, Hao Tang</div>
-            <div class="paper-summary">
-                <div class="summary-row">
-                    <span class="summary-label">任务设定</span>
-                    <span class="summary-text">视频中的 3D 场景空间关系推理任务</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">MLLM 难以从冗余视频观测中稳定聚合空间证据</span>
-                </div>
-                <div class="summary-row">
-                    <span class="summary-label">解决方案</span>
-                    <span class="summary-text">构建<strong class="kw">几何一致性记忆</strong>存储证据，用<strong class="kw">一致性强化学习</strong>提升跨视角稳定性</span>
-                </div>
-            </div>
-            
-            <div class="paper-links">
-                <a href="https://alphaxiv.org/abs/2607.17599" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
@@ -589,15 +490,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">四足机器人在动态环境中的视觉导航避障</span>
+                    <span class="summary-text">四足机器人动态环境下的<strong class="kw">视觉导航避障</strong>策略学习</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有策略仅凭当前观测，难以预判障碍物短期运动趋势</span>
+                    <span class="summary-text">反应式策略只依当前观测决策,对障碍物运动<strong class="kw">预判不足</strong>易碰撞</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">训练时用 <strong class="kw">JEPA 式预测器</strong>预测未来隐状态，推理时零成本丢弃，实现零样本 <strong class="kw">sim-to-real</strong> 迁移</span>
+                    <span class="summary-text">训练时用 <strong class="kw">JEPA 式预测器</strong>监督循环隐状态预测未来,推理时舍弃、零额外开销,Go2 实机验证 <strong class="kw">sim-to-real</strong> 零样本迁移</span>
                 </div>
             </div>
             
@@ -614,15 +515,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">博士论文：研究博弈强化学习与基础模型时代的决策方法</span>
+                    <span class="summary-text">综述强化学习从博弈算法到基础模型时代的发展</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">预训练生成模型能为序列决策提供更强的结构化先验</span>
+                    <span class="summary-text">传统 RL 难以应对高维世界的规划与长程决策</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">构建<strong class="kw">扩散式世界模型</strong>，研究视频生成与<strong class="kw">交互式世界模型</strong>中动作如何影响未来观测</span>
+                    <span class="summary-text">研究<strong class="kw">扩散世界模型</strong>、生成式策略类，及动作驱动的<strong class="kw">交互式视频世界模型</strong></span>
                 </div>
             </div>
             
@@ -639,15 +540,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">评估<strong class="kw">视频生成模型</strong>能否真正对真实世界做因果推理</span>
+                    <span class="summary-text">评估<strong class="kw">视频生成模型</strong>能否真正推理真实世界因果关系</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有指标割裂了画面真实感与语义因果逻辑的评测</span>
+                    <span class="summary-text">逼真视频可能只是记忆表象而非因果理解，现有指标难辨真伪</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出双重评测框架 <strong class="kw">CGDJ</strong> ，分别检验显式因果感知与隐式生成-预测差距，审查<strong class="kw">世界模型一致性</strong></span>
+                    <span class="summary-text">提出 <strong class="kw">Causal-Generative Dual-Judge</strong> ，从显式因果感知与隐式生成预测差距双重审计<strong class="kw">世界模型</strong>一致性</span>
                 </div>
             </div>
             
@@ -664,15 +565,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">基于骨骼序列识别人机/人人交互动作</span>
+                    <span class="summary-text">基于<strong class="kw">骨骼序列</strong>的人机/人人交互识别</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">骨骼数据缺乏视觉细节，难以捕捉交互线索</span>
+                    <span class="summary-text">骨骼数据缺乏视觉信息，难以捕捉<strong class="kw">交互线索</strong></span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用<strong class="kw">对比学习</strong>对齐骨骼与 RGB 视频特征，推理时仅需骨骼即可保留视觉增强效果</span>
+                    <span class="summary-text">通过<strong class="kw">骨骼与 RGB 对比对齐</strong>学习交互特征，推理时仅用骨骼保持高效</span>
                 </div>
             </div>
             
@@ -689,15 +590,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">遥操作机械臂抓取时提供<strong class="kw">共享自主</strong>辅助</span>
+                    <span class="summary-text">基于<strong class="kw">开放词汇</strong>的机器人抓取共享自主系统</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">纯视觉遥操作难以精确对准目标且易碰撞</span>
+                    <span class="summary-text">纯视觉遥操作难精准对齐目标，易发生<strong class="kw">碰撞</strong></span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用<strong class="kw">视觉语言模型</strong>定位开放词汇目标， MPC 控制器实时避障并辅助抓取</span>
+                    <span class="summary-text">用<strong class="kw">视觉语言模型</strong>定位目标，结合 <strong class="kw">MPC</strong> 控制器避障精准抓取</span>
                 </div>
             </div>
             
@@ -714,15 +615,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">机器人操作中融合多模态<strong class="kw">扩散策略</strong>的动作生成</span>
+                    <span class="summary-text">机器人接触式操控中融合视觉与力觉等异步多模态策略</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">各模态传感频率、延迟不同，同步融合拖慢高频反馈</span>
+                    <span class="summary-text">现有多模态扩散策略同步融合会拖慢高频反馈、限制扩展性</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出 <strong class="kw">LAG-Fusion</strong> 框架，各模态按自身频率异步提供去噪引导，通过参考系重定基准对齐延迟后融合</span>
+                    <span class="summary-text">提出<strong class="kw">延迟感知引导融合</strong>，各模态策略按自身频率异步生成去噪引导并对齐后融合</span>
                 </div>
             </div>
             
@@ -739,20 +640,21 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">多视角<strong class="kw">手物交互</strong>视频与 3D 运动的联合生成</span>
+                    <span class="summary-text">多视角<strong class="kw">手物交互</strong>视频与 3D 轨迹联合生成</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">复杂手部运动和遮挡导致多视角一致性难以保证</span>
+                    <span class="summary-text">手部运动复杂多遮挡，多视角<strong class="kw">几何一致性</strong>难保证</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用统一<strong class="kw">扩散模型</strong>联合建模 RGB 视频与 3D 点轨迹，用伪视频对齐几何与 2D 潜空间</span>
+                    <span class="summary-text">用<strong class="kw">扩散 Transformer</strong> 联合建模 RGB 视频与 3D 点轨迹，再用全局运动对齐扩散精修为<strong class="kw">度量尺度</strong>轨迹</span>
                 </div>
             </div>
             
             <div class="paper-links">
                 <a href="https://alphaxiv.org/abs/2607.17097" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://droliven.github.io/HarmoHOI_project" class="link-btn project" target="_blank">Project Page</a>
             </div>
         </div>
 
@@ -764,15 +666,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">预测机器人<strong class="kw">搬运任务</strong>中的失败先兆</span>
+                    <span class="summary-text">预测机器人<strong class="kw">非抓取式搬运</strong>任务中的失败前兆</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有方法对动态动作敏感、依赖已知策略结构</span>
+                    <span class="summary-text">高速搬运易失败，现有方法难判断能否及时干预</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">分析物体相对<strong class="kw">载具的运动</strong>，提出 <strong class="kw">PREFAIL</strong> 方法并标注可干预时间数据集</span>
+                    <span class="summary-text">分析目标物体相对托盘的<strong class="kw">相对运动</strong>预测失败，并标定最晚干预时刻</span>
                 </div>
             </div>
             
@@ -789,20 +691,21 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">从多视角图像生成具身场景的 3D 资产</span>
+                    <span class="summary-text">面向具身应用的<strong class="kw">多视角 3D 场景资产生成</strong></span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">真实场景遮挡多、视角不一致，单图 3D 生成难泛化</span>
+                    <span class="summary-text">单视角生成难处理真实场景遮挡与跨视角不一致</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">免训练框架，用<strong class="kw">关键视角选择</strong>和<strong class="kw">隐空间速度融合</strong>整合多视角证据并优化场景布局</span>
+                    <span class="summary-text"><strong class="kw">免训练</strong>扩展 SAM3D ，融合互补视角证据并用轻量高斯优化精修场景布局</span>
                 </div>
             </div>
             
             <div class="paper-links">
                 <a href="https://alphaxiv.org/abs/2607.16805" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://github.com/xibi777/Scene-SAM3D" class="link-btn project" target="_blank">Project Page</a>
             </div>
         </div>
 
@@ -814,20 +717,21 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">用<strong class="kw">强化学习</strong>优化动作条件<strong class="kw">世界模型</strong>的物理与视觉保真度</span>
+                    <span class="summary-text">优化<strong class="kw">动作条件世界模型</strong>的物理性与视觉保真度</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有世界模型只靠像素重建损失，难以显式优化物理合理性且泛化差</span>
+                    <span class="summary-text">现有方法只用专家数据像素重建，<strong class="kw">分布外动作</strong>泛化差</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">结合 ID 轨迹与噪声驱动的 <strong class="kw">OOD 动作探索</strong>，通过奖励机制显式优化 PAV 目标</span>
+                    <span class="summary-text">用强化学习显式优化 PAV 目标，结合专家轨迹与<strong class="kw">噪声驱动 OOD 探索</strong></span>
                 </div>
             </div>
             
             <div class="paper-links">
                 <a href="https://alphaxiv.org/abs/2607.16602" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://github.com/Social-AI-Studio/PAVXploreRL" class="link-btn project" target="_blank">Project Page</a>
             </div>
         </div>
 
@@ -839,15 +743,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">研究基于模型的强化学习中风险信号是否可靠</span>
+                    <span class="summary-text">探讨<strong class="kw">世界模型不确定性</strong>能否作为安全风险信号</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text"><strong class="kw">世界模型</strong>不确定性代理与真实碰撞风险负相关，标准安全机制反而失效</span>
+                    <span class="summary-text">该代理与真实碰撞风险<strong class="kw">负相关</strong>，用其做安全约束反而更危险</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">改用<strong class="kw">世界反馈信号</strong>（雷达余量、碰撞时间、结果监督模型）替代模型内部不确定性</span>
+                    <span class="summary-text">改用<strong class="kw">世界反馈信号</strong>（激光雷达余量、碰撞时间等）替代模型内部不确定性</span>
                 </div>
             </div>
             
@@ -864,20 +768,45 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">评测视频生成模型作为<strong class="kw">物理世界模型</strong>的推理能力</span>
+                    <span class="summary-text">评估视频生成模型作为<strong class="kw">物理世界模型</strong>的推理能力</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">现有基准仅看结果合理性，未验证是否按物理定律推理</span>
+                    <span class="summary-text">现有基准只看结果是否合理，未验证推理过程是否遵循物理定律</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">提出 Apple-π 基准和<strong class="kw">感知-建模-推演</strong>三阶段协议，结合经典力学视频集评测</span>
+                    <span class="summary-text">构建 <strong class="kw">Orchard 基准</strong>，用感知-建构-推演三阶段协议逐层诊断物理推理瓶颈</span>
                 </div>
             </div>
             
             <div class="paper-links">
                 <a href="https://alphaxiv.org/abs/2607.16401" class="link-btn" target="_blank">alphaXiv</a>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <h2 class="paper-title">
+                <a href="https://arxiv.org/abs/2607.16355" target="_blank">PhysAgent: Reflective Agentic Physics Control for Physically Plausible Video Generation</a>
+            </h2>
+            <div class="paper-authors">Qirui Li, Jinkun Hao, Yibo Li, Ran Yi, Paul L. Rosin, Yu-Kun Lai</div>
+            <div class="paper-summary">
+                <div class="summary-row">
+                    <span class="summary-label">任务设定</span>
+                    <span class="summary-text">用物理仿真引导视频生成，保证物理合理性</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">痛点动机</span>
+                    <span class="summary-text">单次生成的物理程序难以准确还原复杂运动与交互</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">解决方案</span>
+                    <span class="summary-text">提出 <strong class="kw">PhysAgent</strong> 反思式智能体，通过仿真验证与程序修正闭环持续优化物理参数</span>
+                </div>
+            </div>
+            
+            <div class="paper-links">
+                <a href="https://alphaxiv.org/abs/2607.16355" class="link-btn" target="_blank">alphaXiv</a>
             </div>
         </div>
 
@@ -889,15 +818,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">从真实户外机器人视频学习可迁移的<strong class="kw">世界模型</strong>表征</span>
+                    <span class="summary-text">从真实户外机器人视频中学习世界模型潜在表示</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">复杂<strong class="kw">户外场景</strong>视觉多变， JEPA 学习鲁棒动态表征困难</span>
+                    <span class="summary-text">复杂户外场景下学习鲁棒潜在动力学很困难</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">引入<strong class="kw">深度先验</strong>监督结合<strong class="kw">各向同性正则化</strong>，学习更鲁棒的潜在动态</span>
+                    <span class="summary-text">引入<strong class="kw">深度几何先验</strong>与各向同性正则化,配合过参数化提升<strong class="kw">世界模型</strong>表征质量</span>
                 </div>
             </div>
             
@@ -914,15 +843,15 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">面向工业场景的<strong class="kw">零样本 6D 位姿估计</strong>与抓取</span>
+                    <span class="summary-text">面向工业抓取场景的零样本 6D 位姿估计</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">新品上线常需重新采集数据训练，视觉系统缺乏灵活性</span>
+                    <span class="summary-text">新物体上线常需重新采集数据并微调,部署慢</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">结合 CAD 模型与 <strong class="kw">DINOv2、GeDi 等基础模型</strong>特征，免微调实现<strong class="kw">毫米级抗遮挡位姿估计</strong></span>
+                    <span class="summary-text">结合 CAD 模型与 <strong class="kw">DINOv2</strong>、GeDi 等基础模型特征,实现免微调的高精度位姿估计</span>
                 </div>
             </div>
             
@@ -939,20 +868,46 @@
             <div class="paper-summary">
                 <div class="summary-row">
                     <span class="summary-label">任务设定</span>
-                    <span class="summary-text">面向服务机器人的 <strong class="kw">3D 语言场</strong>交互式物体检索</span>
+                    <span class="summary-text">面向服务机器人的交互式 3D 场景物体检索</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">痛点动机</span>
-                    <span class="summary-text">特征压缩致相似物体难辨，且难以处理<strong class="kw">模糊查询</strong></span>
+                    <span class="summary-text">特征压缩降低物体区分度,模糊查询易检索出错</span>
                 </div>
                 <div class="summary-row">
                     <span class="summary-label">解决方案</span>
-                    <span class="summary-text">用<strong class="kw">度量学习</strong>构建判别且感知歧义的统一特征空间，模糊时主动请求澄清</span>
+                    <span class="summary-text">提出<strong class="kw">度量学习</strong>构建判别性与<strong class="kw">歧义感知</strong>的统一 3D 语言场特征空间,支持交互澄清</span>
                 </div>
             </div>
             
             <div class="paper-links">
                 <a href="https://alphaxiv.org/abs/2607.16309" class="link-btn" target="_blank">alphaXiv</a>
+            </div>
+        </div>
+
+        <div class="paper-card">
+            <h2 class="paper-title">
+                <a href="https://arxiv.org/abs/2607.16247" target="_blank">Self-Evolving Just-In-Time Memory for Proactive Embodied Safety</a>
+            </h2>
+            <div class="paper-authors">Bingrui Sima, Lizhong Wang, Xiaoya Lu, Kun He, Xiao Yang</div>
+            <div class="paper-summary">
+                <div class="summary-row">
+                    <span class="summary-label">任务设定</span>
+                    <span class="summary-text">具身智能体在家庭任务中主动应对突发安全隐患</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">痛点动机</span>
+                    <span class="summary-text">现有安全护栏靠<strong class="kw">阻断动作</strong>保安全，却严重拖慢任务进度</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">解决方案</span>
+                    <span class="summary-text">提出<strong class="kw">自演化即时记忆</strong>框架，结合信念图与经验记忆，测试时循环优化缓解技能</span>
+                </div>
+            </div>
+            
+            <div class="paper-links">
+                <a href="https://alphaxiv.org/abs/2607.16247" class="link-btn" target="_blank">alphaXiv</a>
+                <a href="https://github.com/DyMessi/JIT-Memory" class="link-btn project" target="_blank">Project Page</a>
             </div>
         </div>
 
